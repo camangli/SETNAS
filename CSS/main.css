@@ -1,0 +1,392 @@
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.m-con{
+    width: 75%;
+    min-height: 90%;
+    margin: 20px auto;
+}
+.brad{
+    border-radius: 2px;
+}
+.brsol{
+    border: 1px #aaa solid;
+}
+.bsad{
+    box-shadow: 2px 5px 6px #aaa;
+}
+.flex{
+    display: flex;
+    align-items:stretch ;
+}
+.l-con{
+    flex-grow:1;    
+    margin-right: 10px;
+    min-width: 250px;
+    max-width: 250px;
+}
+.r-con{
+    flex-grow: 3;
+}
+.l-tp{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.con-t:first-child{
+    width: 100px;
+}
+.con-t:last-child{
+    flex-grow: 3;
+}
+.ft{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    overflow: hidden;
+}
+.ft img{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.con-t:last-child h3{
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+.con-t:last-child p{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+/*detail Barang*/
+.c-dtbrng{
+    width: 100%;
+    height: 400px;
+}
+.dtbrng:first-child{
+    flex-grow: 1;
+}
+.dtbrng:last-child{
+    flex-grow: 2;
+}
+.dtbrng img{
+    width: 100%;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.dtbrng h1{
+    margin-bottom: 0;
+}
+.dtbrng p{
+    margin-top: 0;
+}
+.c-img {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: #aaa 1px solid;
+}
+/*MENU*/
+.c-mn{
+    width: 100%;
+
+}
+.c-mn ul{
+    width: 100%;
+    margin: 0;
+    padding:0;
+    list-style: none;
+    font-weight: 450;
+}
+.c-mn ul li{
+    padding: 15px 10px;
+    background: #fff;
+    transition: 0.4s;
+    font-size: 15px;
+}
+.c-mn ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.c-mn ul li:hover{
+    background: #eee;
+    transition: 0.4s;
+}
+.ct-pnl{
+    padding: 10px 0px;
+}
+.t-pnl:first-child{
+    background: #fff;
+    margin: 10px;
+}
+.t-pnl:first-child h1{
+    margin: 0;
+    padding: 0;
+}
+/*.t-pnl:last-child{
+    height: 70px;
+}*/
+.c-st-ctn {
+    background-color: #f1f1f1;
+    flex-grow: 1;
+    text-align: center;
+    border-bottom:#eee 5px solid;
+    text-decoration: none;
+    color: #000;
+    transition: 0.4s;
+}
+.active, .c-st-ctn:hover {
+    background: #ddd;
+    border-bottom: #1167b1 5px solid;
+    color: #1167b1;
+    transition: 0.4s;
+}
+/*table Bag. Umum*/
+.cb-pnl table{
+    margin: auto;
+    width: 100%;
+    border: none;
+    border-collapse:collapse;
+}
+.cb-pnl table tr th{
+    padding: 10px;
+    background: #1167b1;
+    color: #fff;
+    text-align: left;
+}
+.cb-pnl table tr:nth-child(even) {
+    background-color: #d0efff;
+}
+.cb-pnl table tr:hover{
+    background-color: #f79e02;
+    transition: 0.4s;
+}
+.cb-pnl table tr td{
+    padding: 10px;
+    text-decoration: none;
+}
+.cb-pnl table tr td a{
+    text-decoration: none;
+    color:#000;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: 0.4s;
+    margin: 2px;
+}
+.c-mn-cb-pnl{
+    margin: 20px 10px;
+}
+.mn-cb-pnl{
+    text-decoration: none;
+    background: #adc535;
+    color:#000;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+.mn-cb-pnl:hover{
+    background: #ddf07f;
+    transition: 0.4s;
+}
+.cb-pnl table tr td a:hover{
+    text-decoration: none;
+    background: #d0efff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.cb-pnl .sb-tjdl{
+    background: #2a9df4 !important;
+    text-align:left !important;
+}
+
+.c-tp-pnl{
+    padding: 25px;
+}
+.c-tp-pnl h1{
+    text-align: center;
+}
+.lg{
+    padding: 0 15px 0 15px;
+}
+.lg-m{
+    padding: 10px 18px;
+}
+/*menu*/
+.brnd{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 530px -175px;
+}
+.evnt{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 469px -55px;
+}
+.invt{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 158px -350px;
+}
+.kary{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 530px -232px;
+}
+
+/*dasboar - menu*/
+
+.dsbr{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 156px -289px;
+}
+.dftr{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 153px -232px;
+}
+.in{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 278px -113px;
+}
+.out{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 215px -113px;
+}
+.dtl{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 279px -54px;
+    background-blend-mode:darken;
+}
+.stj{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 218px -172px;
+}
+.tstj{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 157px -172px;
+}
+.tbh{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 93px -230px;
+}
+.ubh{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 401px -54px;
+}
+.hps{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 93px -172px;
+}
+.srt{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 97px -56px; 
+}
+.ctk{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 217px -232px;
+}
+.cmnt{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 402px -172px;
+}
+.send{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 463px -231px;
+}
+/*background button*/
+.net{
+    background: #adc535;
+}
+.alrt{
+    background: #ff8d8d;
+}
+.conf{
+   background: #2a9df4; 
+}
+/*formulir*/
+.inpt {
+    padding: 10px;
+    font-size: 15px;
+    width: 300px;
+}
+.txtarea{
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btn{
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #FFF;
+    background: #1167b1;
+    border:none;
+    transition: 0.4s;
+}
+.btn:hover{
+    background: #2a9df4;
+    transition: 0.4s;
+    border: 1px #1167b1 inset;
+}
+.jml {
+    width: 100px;
+}
+.date{
+    width: 200px;  
+    font-size: 15px;
+    padding: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.slct {
+    padding: 10px;
+    font-size: 15px;
+}
+.c-tp-pnl .flex div:last-child{
+    margin-left: 20px;
+}
+.c-frame {
+    padding: 20px;
+    margin: 30px 0px;
+}
+.nameFrame{
+    position: absolute;
+    font-weight: bold;
+    padding: 10px;
+    margin: -40px 0 0 0;
+    background-color: #fff;
+}
