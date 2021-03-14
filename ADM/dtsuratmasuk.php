@@ -1,6 +1,5 @@
 <div class="c-tp-pnl">
-    <h1>INPUT DATA SURAT MASUK</h1>
-    <form action="?hal=inputSuratKeluar">
+    <h1>DETAIL SURAT MASUK</h1>
         <div class="flex">
             <div>
                 <h3>No. Agenda</h3>
@@ -11,43 +10,68 @@
                 <p class="brad brsol inpt">19/21/2021</p>
             </div>
         </div>
-        <div class="c-frame brad brsol pengirim">
+        <div class="c-frame brad brsol">
             <p class="nameframe">Data Pengirim</p>
-            <h3>Tanggal Surat</h3>
-                <input type="date" id="tanggal" class="brad brsol inpt date" value="<?php echo date("Y-m-d")?>"/>
-            <div class="flex">
-                <div>
-                    <h3>Jenis Surat</h3>
-                    <select id="jenis" class="brad brsol inpt" onchange="nomor()">
-                        <option value="DPP">DPP</option>
-                        <option value="Anggota">Anggota</option>
-                        <option value="Pemerintah">Pemerintah</option>
-                        <option value="Umum">Umum</option>
-                        <option value="Luar Negeri">Luar Negeri</option>
-                    </select>   
-                </div>
-                <div>
-                    <h3>No. Surat</h3>
-                    <input type="text" class="brad brsol inpt" placeholder="No. Surat"/>
-                </div>
+            <table>
+                <tr>
+                    <td>Tanggal Masuk</td>
+                    <td>: 12-12-1202</td>
+                </tr>
+                <tr>
+                    <td>No. Surat</td>
+                    <td>: 123/AD/DPP-213/V/2021</td>
+                </tr>
+                    <td>Nama</td>
+                    <td>: Nama Pengirim</td>
+                </tr>
+                </tr>
+                    <td>Jabatan</td>
+                    <td>: Jabatan Pengirim</td>
+                </tr>
+                </tr>
+                    <td>Instansi</td>
+                    <td>: Instansi Pengirim</td>
+                </tr>
+                </tr>
+                    <td>Perihal</td>
+                    <td>: Perihal Surat</td>
+                </tr>
+            </table>
+            <div class="c-mn-cb-pnl">
+            <a href="?hal=UpdateDisposisi" class="mn-cb-pnl net"><span class="lg-m ubh"></span>Edit</a>
+            <a href="DATA/SuratMasuk/Kartu Ujian.pdf" target="_blank" class="mn-cb-pnl net"><span class="lg-m ctk"></span>Cetak</a>
+            <a href="?hal=Tanggapan" class="mn-cb-pnl alrt"><span class="lg-m hps"></span>Hapus</a>
             </div>
-            <div class="flex">
-                <div>
-                    <h3>Nama</h3>
-                    <input type="text" class="brad brsol inpt" placeholder="Nama"/>     
-                </div>
-                <div>
-                    <h3>Jabatan</h3>
-                    <input type="text" class="brad brsol inpt" placeholder="Jabatan"/>
-                </div>
-            </div>
-            <h3>Instansi</h3>
-            <input type="text" class="brad brsol inpt" placeholder="Instansi"/>
         </div>
-        <h3>Perihal</h3>
-        <textarea placeholder="Perihal" class="txtarea brad brsol"></textarea>
-        <h3>File Surat</h3>
-        <input type="file" class="brad brsol inpt"/><br>
-        <input type="submit" class="btn brsad" value="Input Surat"/>
-    </form>
+        <div class="c-frame brad brsol pengirim">
+            <p class="nameframe">Tanggapan/Masukan</p>
+            <div class="c-cont-frame brad brsol">
+                <div class="c-tgp">
+                    <div class="i-tgp">
+                        <h4>Pengirim</h4>
+                        <p>Isi Tanggapan dan panjang isi tanggapan dan panjang</p>
+                        <p class="plc">Hari, 12 Bulan 2021, 10.00</p>
+                    </div>
+                    <div class="i-tgp">
+                        <h4>Pengirim</h4>
+                        <p>Isi Tanggapan dan panjang isi tanggapan dan panjang</p>
+                        <p class="plc">Hari, 12 Bulan 2021, 10.00</p>
+                    </div>
+                </div>
+                <div class="c-tgp brsad">
+                    <div class="brsol brad c-tgp-txt">
+                        <form action="#" class="flex">
+                        <textarea placeholder="Tanggapan/Masukan"></textarea>
+                            <input type="submit" value="">
+                        </form>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-frame brad brsol pengirim">
+            <p class="nameframe">Isi Surat</p>
+            <object data="DATA/SuratMasuk/Kartu Ujian.pdf" type="application/pdf" width="100%" height="500px">
+            </object>        
+        </div>
+    </div>
 </div>

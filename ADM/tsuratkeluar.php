@@ -5,47 +5,42 @@
     <tr>
         <th>No. Surat</th>
         <th>Tujuan</th>
-        <th>Jabatan/Instansi</th>
         <th>Perihal</th>
         <th>Status</th>
-        <th>Action</th>
+        <th style="width: 80px;">Action</th>
     </tr>
     <tr>
-        <th class="sb-tjdl" colspan="6">12 Tanggal 2021</th>
-    </tr>
-    <tr>
-        <td>No. Surat</td>
-        <td>Tujuan</td>
-        <td>Jabatan/Instansi</td>
-        <td>Perihal</td>
-        <td><span class="lg-m tstj"></span>Status</td>
-        <td><a href="?hal=DetailSurat" class="net"><span class="lg-m dtl"></span>Detail</a></td>
+        <th class="sb-tjdl" colspan="5">12 Tanggal 2021</th>
     </tr>
     <tr>
         <td>No. Surat</td>
-        <td>Tujuan</td>
-        <td>Jabatan/Instansi</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
         <td>Perihal</td>
         <td><span class="lg-m tstj"></span>Status</td>
-        <td><a href="?hal=DetailSurat" class="net"><span class="lg-m dtl"></span>Detail</a></td>
-    </tr>
-    <tr>
-        <th class="sb-tjdl" colspan="6">12 Tanggal 2021</th>
+        <td style="width: 80px;"><a href="?hal=DetailSuratKeluar" class="net"><span class="lg-m dtl"></span>Detail</a></td>
     </tr>
     <tr>
         <td>No. Surat</td>
-        <td>Tujuan</td>
-        <td>Jabatan/Instansi</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
         <td>Perihal</td>
         <td><span class="lg-m tstj"></span>Status</td>
-        <td><a href="?hal=DetailSurat" class="net"><span class="lg-m dtl"></span>Detail</a></td>
+        <td style="width: 80px;"><a href="?hal=DetailSuratKeluar" class="net"><span class="lg-m dtl"></span>Detail</a></td>
+    </tr>
+    <tr>
+        <th class="sb-tjdl" colspan="5">12 Tanggal 2021</th>
     </tr>
     <tr>
         <td>No. Surat</td>
-        <td>Tujuan</td>
-        <td>Jabatan/Instansi</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
         <td>Perihal</td>
         <td><span class="lg-m tstj"></span>Status</td>
-        <td><a href="?hal=DetailSurat" class="net"><span class="lg-m dtl"></span>Detail</a></td>
+        <td style="width: 80px;"><a href="?hal=DetailSuratKeluar" class="net"><span class="lg-m dtl"></span>Detail</a></td>
+    </tr>
+    <tr>
+        <td>No. Surat</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
+        <td>Perihal</td>
+        <td><span class="lg-m tstj"></span>Status</td>
+        <td style="width: 80px;"><a href="?hal=DetailSuratKeluar" class="net"><span class="lg-m dtl"></span>Detail</a></td>
     </tr>
 </table>

@@ -1,0 +1,66 @@
+
+        
+CREATE TABLE pengiriman
+(
+  id_pengiriman INT NOT NULL AUTO_INCREMENT,
+  id_suratkeluar INT,
+  id_user INT,
+  nama_penerima VARCHAR(100),
+  tanggal_pengiriman DATE,
+  PRIMARY KEY (id_pengiriman), FOREIGN KEY (id_suratkeluar) REFERENCES 	     SuratKeluar(id_suratkeluar), FOREIGN KEY (id_user) REFERENCES user(id_user)
+);
+
+CREATE TABLE SuratKeluar
+(
+  id_suratkeluar   INT          NOT NULL AUTO_INCREMENT COMMENT 'auto increment',
+  no_surat         CHAR(50)     NULL    ,
+  tanggal_surat DATE         NULL    ,
+  kepengurusan     CHAR(20)     NULL    ,
+  nama_pengirim    VARCHAR(100) NULL    ,
+  jabatan_pengirim VARCHAR(100) NULL    ,
+  nama_tujuan      VARCHAR(100) NULL    ,
+  jabatan_tujuan   VARCHAR(100) NULL    ,
+  instansi_tujuan  VARCHAR(255) NULL    ,
+  perihal          VARCHAR(255) NULL    ,
+  nama_file        VARCHAR(250) NULL    ,
+  PRIMARY KEY (id_suratkeluar)
+) COMMENT 'Untuk Data Surat Keluar';
+
+CREATE TABLE SuratMasuk
+(
+  Id_suratmasuk INT          NOT NULL AUTO_INCREMENT COMMENT 'auto increment',
+  no_agenda     CHAR(25)     NULL    ,
+  no_surat      CHAR(100)    NULL    ,
+  tanggal_masuk DATE         NULL    ,
+  tanggal_surat DATE         NULL    ,
+  jenis_surat   VARCHAR(15)  NULL    ,
+  nama          VARCHAR(100) NULL    ,
+  jabatan       VARCHAR(100) NULL    ,
+  instansi      VARCHAR(255) NULL    ,
+  perihal       VARCHAR(255) NULL    ,
+  nama_file     VARCHAR(255) NULL    ,
+  PRIMARY KEY (Id_suratmasuk)
+) COMMENT 'Untuk Data Surat Masuk';
+
+CREATE TABLE user
+(
+  id_user  INT          NOT NULL AUTO_INCREMENT COMMENT 'auto increment',
+  jabatan  INT          NULL    ,
+  bagian   VARCHAR(255) NULL    ,
+  email    CHAR(100)    NULL    ,
+  nama     VARCHAR(100) NULL    ,
+  alamat   TEXT         NULL    ,
+  no_telp  CHAR(14)     NULL    ,
+  password VARCHAR(255) NULL    ,
+  PRIMARY KEY (id_user)
+);
+
+CREATE TABLE tanggapan
+(
+  id_tanggapan INT  NOT NULL,
+  id_suratmasuk     INT  NULL    ,
+  id_user      INT  NULL    ,
+  tanggapan    TEXT NULL    ,
+  PRIMARY KEY (id_tanggapan), FOREIGN KEY(id_suratkeluar) REFERENCES SuratMasuk(id_suratmasuk), FOREIGN KEY (id_user) REFERENCES user(id_user)
+);
+

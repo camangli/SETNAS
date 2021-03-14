@@ -4,25 +4,6 @@
         var tgl = document.getElementById("tanggal").value;
         var bulan = new Date(tgl);
         var romanbulan;
-        var jenissurat;
-
-        switch(jenis){
-            case 'DPP':
-                jenissurat = "/A/DPP/";
-                break;
-            case 'Anggota':
-                jenissurat = "/A/ANG/";
-                break;
-            case 'Pemerintah':
-                jenissurat = "/B/PEM/";
-                break;
-            case 'Umum':
-                jenissurat = "/C/UM/";
-                break;
-            case 'Luar Negeri':
-                jenissurat = "/D/LN/";
-                break;
-        }
         
         switch(bulan.getMonth()){
             case 0:
@@ -63,44 +44,47 @@
                 break;
             }
 
-        document.getElementById("nosurat").value = "NOMOR"+jenissurat+romanbulan+"/"+bulan.getFullYear();
+        document.getElementById("nosurat").value = "NOMOR/"+jenis+"/"+romanbulan+"/"+bulan.getFullYear();
 
     }
 
 </script>
 <div class="c-tp-pnl">
-    <h1>INPUT DATA SURAT MASUK</h1>
-    <form action="?hal=inputSuratKeluar">
+    <h1>UBAH DATA SURAT KELUAR</h1>
+    <form action="?hal=InputSuratBaru">
         <div class="flex">
             <div>
-                <h3>No. Agenda</h3>
+                <h3>No. Surat</h3>
                 <input type="text" id="nosurat" class="brad brsol inpt" placeholder="No. Surat" disabled/>     
             </div>
             <div>
-                <h3>Tanggal Masuk</h3>
-                <input type="date" id="tanggal" class="brad brsol inpt date" value="<?php echo date("Y-m-d")?>" onchange="nomor()" disabled/>
-            </div>
+                <h3>Tanggal Keluar</h3>
+                <input type="date" id="tanggal" class="brad brsol inpt date" value="<?php echo date("Y-m-d")?>" onchange="nomor()" disabled/></div>
         </div>
         <div class="c-frame brad brsol pengirim">
             <p class="nameframe">Data Pengirim</p>
-            <h3>Tanggal Surat</h3>
-                <input type="date" id="tanggal" class="brad brsol inpt date" value="<?php echo date("Y-m-d")?>"/>
+            
+                    <h3>Kepengurusan</h3>
+                    <select id="jenis" class="brad brsol inpt" onchange="nomor()">
+                        <option value="DPN">DPN</option>
+                        <option value="DKN">DKN</option>
+                        <option value="POKJA">POKJA</option>
+                        <option value="SETNAS">SEKRETARIAT</option>
+                    </select>    
+               
             <div class="flex">
                 <div>
-                    <h3>Jenis Surat</h3>
-                    <select id="jenis" class="brad brsol inpt" onchange="nomor()">
-                        <option value="DPP">DPP</option>
-                        <option value="Anggota">Anggota</option>
-                        <option value="Pemerintah">Pemerintah</option>
-                        <option value="Umum">Umum</option>
-                        <option value="Luar Negeri">Luar Negeri</option>
-                    </select>   
+                    <h3>Nama</h3>
+                    <input type="text" class="brad brsol inpt" placeholder="Nama"/>     
                 </div>
                 <div>
-                    <h3>No. Surat</h3>
-                    <input type="text" class="brad brsol inpt" placeholder="No. Surat"/>
+                    <h3>Jabatan</h3>
+                    <input type="text" class="brad brsol inpt" placeholder="Jabatan"/>
                 </div>
             </div>
+        </div>
+        <div class="c-frame brad brsol">
+            <p class="nameframe">Data Tujuan</p>
             <div class="flex">
                 <div>
                     <h3>Nama</h3>

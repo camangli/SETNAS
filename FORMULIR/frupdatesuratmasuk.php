@@ -69,7 +69,7 @@
 
 </script>
 <div class="c-tp-pnl">
-    <h1>INPUT DATA SURAT MASUK</h1>
+    <h1>UBAH DATA SURAT MASUK</h1>
     <form action="?hal=inputSuratKeluar">
         <div class="flex">
             <div>

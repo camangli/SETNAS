@@ -45,12 +45,18 @@
                         include "ADM/tsuratkeluar.php";
                     }else if ($_GET["hal"]=="DetailSurat"){
                         include "ADM/dtsuratmasuk.php";
+                    }else if ($_GET["hal"]=="DetailSuratKeluar"){
+                        include "ADM/dtsuratkeluar.php";
                     }else if ($_GET["hal"]=="SuratBaru"){
                         include "FORMULIR/frsuratkeluar.php";
                     }else if ($_GET["hal"]=="BuatDisposisi"){
                         include "FORMULIR/frsuratmasuk.php";
                     }else if ($_GET["hal"]=="UpdateDisposisi"){
                         include "FORMULIR/frupdatesuratmasuk.php";
+                    }else if ($_GET["hal"]=="UpdateSuratKeluar"){
+                        include "FORMULIR/frupdatesuratkeluar.php";
+                    }else if ($_GET["hal"]=="Pengiriman"){
+                        include "FORMULIR/frpengiriman.php";
                     }
                 ?>
             </div>

@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+margin:0;
+padding:0;
+background:#CCCCCC;
+}
+p{
+margin:0;
+margin-top:10px;
+padding:0;
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+color:#CCCCCC;
+text-align:right;
+font-size:10px;
+}
+#container{
+margin:0;
+padding:0;
+}
+#mainLog {
+box-shadow: 4px 4px 4px #AAA;
+border-radius:5px; 
+background:#666666;
+width:300px;
+height:300px;
+margin:auto;
+margin-top:10%;
+padding:5px;
+}
+#mainLog h1{
+font-size:40px;
+color:#FFFFFF;
+margin-top:20px;
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+}
+#coninp{
+width:290px;
+margin:auto;
+}
+.Baginputu{
+font-size:20px;
+padding:10px;
+height:40px;
+width:270px;
+outline:none;
+border-radius:5px 5px 0 0;
+border:2px #737373 solid;
+border-bottom:1px #999999 solid;
+}
+.Baginputb{
+outline:none;
+font-size:20px;
+padding:10px;
+height:40px;
+width:270px;
+border:#737373 2px solid;
+border-radius: 0 0 10px 10px;
+border-top:none;
+margin-bottom:10px;
+}
+.Bagsubmit{
+outline:none;
+background:#0080C0;
+width:290px;
+height:50px;
+border:none;
+border-radius:5px;
+font-size:36px;
+font-weight:bold;
+color:#FFFFFF;
+box-shadow: 0px 2px 4px #6B6B6B;
+}
+.Bagsubmit:hover{
+background:#0080FF;
+}

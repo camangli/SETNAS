@@ -3,55 +3,44 @@
 </div>
 <table>
     <tr>
-        <th>No. Surat</th>
+        <th style="width: 100px;">No. Surat</th>
         <th>Pengirim</th>
-        <th>Jabatan/Instansi</th>
-        <th>Tanggal Surat</th>
+        <th style="width: 50px;">Tanggal Surat</th>
         <th>Perihal</th>
-        <th style="width: 100px;">Action</th>
+        <th style="width: 80px;">Action</th>
     </tr>
     <tr>
-        <th class="sb-tjdl" colspan="7">12 Tanggal 2021</th>
+        <th class="sb-tjdl" colspan="5">12 Tanggal 2021</th>
     </tr>
     <tr>
-        <td>No. Surat</td>
-        <td>Pengirim</td>
-        <td>Jabatan/Instansi</td>
+        <td style="width: 200px;">No. Surat</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
+        <td style="width: 50px;">Tanggal Surat</td>
+        <td>Perihal</td>
+        <td style="width: 80px;"><p><a href="?hal=DetailSurat" class="net"><span class="lg-m dtl"></span>Detail</a></p></td>
+    </tr>
+    <tr>
+        <td style="width: 200px;">No. Surat</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
+        <td style="width: 50px;">Tanggal Surat</td>
+        <td>Perihal</td>
+        <td style="width: 80px;"><a href="?hal=CetakDisposisi" class="net"><span class="lg-m dtl"></span>Detail</a></td>
+    </tr>
+    <tr>
+        <th class="sb-tjdl" colspan="5">12 Tanggal 2021</th>
+    </tr>
+    <tr>
+        <td style="width: 200px;">No. Surat</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
+        <td style="width: 50px;">Tanggal Surat</td>
+        <td>Perihal</td>
+        <td style="width: 80px;"><p><a href="?hal=CetakDisposisi" class="net"><span class="lg-m dtl"></span>Detail</a></p></td>
+    </tr>
+    <tr>
+        <td style="width: 200px;">No. Surat</td>
+        <td>Pengirim<br><b>Jabatan<br>Instansi</b></td>
         <td>Tanggal Surat</td>
         <td>Perihal</td>
-        <td>
-            <p><a href="?hal=Disposisi" class="net"><span class="lg-m send"></span>Edarkan</a></p>
-            <p><a href="?hal=DetailSurat" class="net"><span class="lg-m dtl"></span>Detail</a></p>
-            <p><a href="?hal=UpdateDisposisi" class="net"><span class="lg-m ubh"></span>Edit</a></p>
-            <p><a href="?hal=CetakDisposisi" class="net"><span class="lg-m ctk"></span>Cetak</a></p>
-            <p><a href="?hal=Tanggapan" class="net"><span class="lg-m cmnt"></span>Tanggapan</a></p>
-        </td>
-    </tr>
-    <tr>
-        <td>No. Surat</td>
-        <td>Pengirim</td>
-        <td>Jabatan/Instansi</td>
-        <td>Tanggal Surat</td>
-        <td>Perihal</td>
-        <td><a href="?hal=CetakDisposisi" class="net"><span class="lg-m dtl"></span>Detail</a></td>
-    </tr>
-    <tr>
-        <th class="sb-tjdl" colspan="7">12 Tanggal 2021</th>
-    </tr>
-    <tr>
-        <td>No. Surat</td>
-        <td>Pengirim</td>
-        <td>Jabatan/Instansi</td>
-        <td>Tanggal Surat</td>
-        <td>Perihal</td>
-        <td><p><a href="?hal=CetakDisposisi" class="net"><span class="lg-m dtl"></span>Detail</a></p></td>
-    </tr>
-    <tr>
-        <td>No. Surat</td>
-        <td>Pengirim</td>
-        <td>Jabatan/Instansi</td>
-        <td>Tanggal Surat</td>
-        <td>Perihal</td>
-        <td><a href="?hal=CetakDisposisi" class="net"><span class="lg-m dtl"></span>Detail</a></td>
+        <td style="width: 80px;"><a href="?hal=CetakDisposisi" class="net"><span class="lg-m dtl"></span>Detail</a></td>
     </tr>
 </table>
