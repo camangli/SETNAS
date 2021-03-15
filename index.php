@@ -4,6 +4,10 @@
     <script>
        
     </script>
+    <?php
+        include "MOD/function.php";
+        include "MOD/session.php";
+    ?>
 </head>
 <body>
     <div class="m-con flex">

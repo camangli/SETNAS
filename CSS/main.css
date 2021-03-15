@@ -3,7 +3,7 @@ body{
     margin: 0;
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    font-size: 14px;
 }
 .m-con{
     width: 75%;
@@ -119,7 +119,7 @@ body{
     padding: 15px 10px;
     background: #fff;
     transition: 0.4s;
-    font-size: 15px;
+    font-size: 14px;
 }
 .c-mn ul li a {
     text-decoration: none;
@@ -165,6 +165,7 @@ body{
     width: 100%;
     border: none;
     border-collapse:collapse;
+    font-size: 14px;
 }
 .cb-pnl table tr th{
     padding: 10px;
@@ -234,22 +235,22 @@ body{
 .brnd{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 530px -175px;
+    background-position: 530px -177px;
 }
 .evnt{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 469px -55px;
+    background-position: 469px -57px;
 }
 .invt{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 158px -350px;
+    background-position: 158px -352px;
 }
 .kary{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 530px -232px;
+    background-position: 530px -234px;
 }
 
 /*dasboar - menu*/
@@ -257,53 +258,53 @@ body{
 .dsbr{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 156px -289px;
+    background-position: 156px -291px;
 }
 .dftr{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 153px -232px;
+    background-position: 153px -234px;
 }
 .in{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 278px -113px;
+    background-position: 278px -115px;
 }
 .out{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 215px -113px;
+    background-position: 215px -115px;
 }
 .dtl{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 279px -54px;
+    background-position: 279px -56px;
     background-blend-mode:darken;
 }
 .stj{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 218px -172px;
+    background-position: 218px -174px;
 }
 .tstj{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 157px -172px;
+    background-position: 157px -174px;
 }
 .tbh{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 93px -230px;
+    background-position: 93px -232px;
 }
 .ubh{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 401px -54px;
+    background-position: 401px -56px;
 }
 .hps{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 93px -172px;
+    background-position: 93px -174px;
 }
 .srt{
     background: url(../IMG/asset/icbck.png);
@@ -313,17 +314,17 @@ body{
 .ctk{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 217px -232px;
+    background-position: 217px -234px;
 }
 .cmnt{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 402px -172px;
+    background-position: 402px -174px;
 }
 .send{
     background: url(../IMG/asset/icbck.png);
     background-size: 590px;
-    background-position: 463px -231px;
+    background-position: 463px -233px;
 }
 /*background button*/
 .net{
@@ -395,7 +396,7 @@ body{
 .nameFrame{
     position: absolute;
     font-weight: bold;
-    padding: 10px;
+    padding: 9px;
     margin: -40px 0 0 0;
     background-color: #fff;
 }

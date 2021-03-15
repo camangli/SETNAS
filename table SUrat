@@ -37,6 +37,18 @@ CREATE TABLE bagian
   PRIMARY KEY (id_bagian)
 );
 
+CREATE TABLE kegiatan
+(
+  id_kegiatan               INT          NOT NULL,
+  nama_kegaitan             VARCHAR(255) NULL    ,
+  penyelenggara_kegiatan    VARCHAR(255) NULL    ,
+  tanggal_mulai_kegiatan    DATE         NULL    ,
+  tanggal_berakhir_kegiatan DATE         NULL    ,
+  lampiran                  VARCHAR(255) NULL    ,
+  PRIMARY KEY (id_kegiatan)
+);
+
+
 CREATE TABLE karyawan
 (
   id_karyawan INT          NOT NULL AUTO_INCREMENT COMMENT 'auto increment',
