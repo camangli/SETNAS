@@ -17,8 +17,8 @@
                     <div class="ft"><img src="../SETNAS/IMG/asset/prfl.png"></div>
                 </div>
                 <div class="con-t">
-                    <h3>Nama</h3>
-                    <p>Nama Bagian</p>
+                    <h3><?php $user = iuser($_SESSION['id']); echo $user?></h3>
+                    <p><?php $jabatan = ibagian($_SESSION['id']); echo $jabatan?></p>
                 </div>
             </div>
             <div class="l-bt">

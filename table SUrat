@@ -19,6 +19,7 @@ CREATE TABLE suratkeluar
 (
   id_suratkeluar   INT          NOT NULL AUTO_INCREMENT COMMENT 'auto increment',
   no_surat         CHAR(50)     NULL    ,
+  tanggal_surat    DATE         NULL    ,
   kepengurusan     CHAR(20)     NULL    ,
   nama_pengirim    VARCHAR(100) NULL    ,
   jabatan_pengirim VARCHAR(100) NULL    ,
@@ -58,6 +59,7 @@ CREATE TABLE karyawan
   alamat      TEXT         NULL    ,
   no_telp     CHAR(14)     NULL    ,
   email       CHAR(100)    NULL    ,
+  foto        CHAR(255)    NULL    ,
   PRIMARY KEY (id_karyawan), FOREIGN KEY (id_bagian) REFERENCES bagian(id_bagian)
 );
 

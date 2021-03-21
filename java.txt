@@ -1,0 +1,49 @@
+<script>
+    function nomor(){
+        var jenis = document.getElementById("jenis").value;
+        var tgl = document.getElementById("tanggal").value;
+        var bulan = new Date(tgl);
+        var romanbulan;
+        
+        switch(bulan.getMonth()){
+            case 0:
+                romanbulan = "I";
+                break;
+            case 1:
+                romanbulan = "II";
+                break;
+            case 2:
+                romanbulan = "III";
+                break;
+            case 3:
+                romanbulan = "IV";
+                break;
+            case 4:
+                romanbulan = "V";
+                break;
+            case 5:
+                romanbulan = "VI";
+                break;
+            case 6:
+                romanbulan = "VII";
+                break;
+            case 7:
+                romanbulan = "VIII";
+                break;
+            case 8:
+                romanbulan = "IX";
+                break;
+            case 9:
+                romanbulan = "X";
+                break;
+            case 10:
+                romanbulan = "XI";
+                break;
+            case 11:
+                romanbulan = "XII";
+                break;
+            }
+            
+            document.getElementById("nosurat").value = this.responseText+"/"+jenis+"/"+romanbulan+"/"+bulan.getFullYear();
+
+    }
