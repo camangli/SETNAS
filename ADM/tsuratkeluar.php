@@ -1,9 +1,9 @@
 <?php
-$con = connect();
-$no = 1;
-$qcari = $_POST['cari'];
-$tglawal = $_POST['tglawal'];
-$tglakhir = $_POST['tglakhir'];
+    $con = connect();
+    $no = 1;
+    $qcari = $_POST['cari'];
+    $tglawal = $_POST['tglawal'];
+    $tglakhir = $_POST['tglakhir'];
 ?>
 <div class="flex">
     <div>
@@ -45,10 +45,10 @@ $tglakhir = $_POST['tglakhir'];
         }
 
         if($qcari != null){  
-            $qw = 'no_surat';
+            $qw = 'perihal';
             $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
             if(mysqli_num_rows($sql1) == null){
-                $qw = 'perihal';
+                $qw = 'no_surat';
                 $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
                 if(mysqli_num_rows($sql1) == null){
                     $qw = 'tanggal_surat';
@@ -166,3 +166,4 @@ $tglakhir = $_POST['tglakhir'];
             }
         }
     ?>
+</table>

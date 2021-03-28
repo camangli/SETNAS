@@ -28,6 +28,7 @@
                         <li><a href="#"><span class="lg-m evnt"></span>Event</a></li>
                         <li><a href="#"><span class="lg-m srt"></span>Surat Menyurat</a></li>
                         <li><a href="#"><span class="lg-m kary"></span>Kepegawaian</a></li>
+                        <li><a href="?hal=logout"><span class="lg-m lgout"></span>Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,7 +48,7 @@
                         include "ADM/tsuratmasuk.php";
                     }else if ($_GET["hal"]=="SuratKeluar"){
                         include "ADM/tsuratkeluar.php";
-                    }else if ($_GET["hal"]=="DetailSurat"){
+                    }else if ($_GET["hal"]=="DetailSuratMasuk"){
                         include "ADM/dtsuratmasuk.php";
                     }else if ($_GET["hal"]=="DetailSuratKeluar"){
                         include "ADM/dtsuratkeluar.php";
@@ -55,7 +56,7 @@
                         include "FORMULIR/frsuratkeluar.php";
                     }else if ($_GET["hal"]=="BuatDisposisi"){
                         include "FORMULIR/frsuratmasuk.php";
-                    }else if ($_GET["hal"]=="UpdateDisposisi"){
+                    }else if ($_GET["hal"]=="UpdateSuratMasuk"){
                         include "FORMULIR/frupdatesuratmasuk.php";
                     }else if ($_GET["hal"]=="UpdateSuratKeluar"){
                         include "FORMULIR/frupdatesuratkeluar.php";

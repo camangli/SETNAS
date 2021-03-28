@@ -88,7 +88,7 @@ CREATE TABLE pengiriman
 CREATE TABLE tanggapan
 (
   id_tanggapan    INT          NOT NULL,
-  id_user         VARCHAR(100) NULL    ,
+  id_karyawan     INT          NULL    ,
   id_suratmasuk   INT          NULL    ,
   tanggapan       TEXT         NULL    ,
   waktu_tanggapan DATE         NULL    ,

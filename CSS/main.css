@@ -267,6 +267,11 @@ body{
     background-size: 590px;
     background-position: 530px -234px;
 }
+.lgout{
+    background: url(../IMG/asset/icbck.png);
+    background-size: 590px;
+    background-position: 221px -294px;
+}
 
 /*dasboar - menu*/
 
@@ -499,6 +504,16 @@ body{
     margin: 3px 0;
     font-size: 12px;
     color: rgb(117, 117, 117);
+}
+.plc-hps{
+    text-decoration: none;
+    margin: 3px 0;
+    font-size: 12px;
+    color: rgb(255, 137, 137);
+}
+.plc-hps:hover{
+    transition: 0.4s;
+    color: rgb(255, 0, 0);
 }
 .c-src{
     padding: 9px;

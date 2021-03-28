@@ -46,7 +46,7 @@
                 </div>
             </div>
             <h3>Instansi</h3>
-            <input type="text" class="brad brsol inpt" placeholder="Instansi" name="instansitujuan"/>
+            <input type="text" class="brad brsol inpt" placeholder="Instansi" name="instansi"/>
         </div>
         <h3>Perihal</h3>
         <textarea placeholder="Perihal" class="txtarea brad brsol" name="perihal"></textarea>

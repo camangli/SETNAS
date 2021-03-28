@@ -85,7 +85,7 @@ $data = mysqli_fetch_object($q);
                 </div>
             </div>
             <h3>Instansi</h3>
-            <input type="text" class="brad brsol inpt" name="instansitujuan" placeholder="Instansi" value="<?php echo $data->instansi_tujuan ?>"/>
+            <input type="text" class="brad brsol inpt" name="instansi" placeholder="Instansi" value="<?php echo $data->instansi_tujuan ?>"/>
         </div>
         <h3>Perihal</h3>
         <textarea placeholder="Perihal" class="txtarea brad brsol" name="perihal"><?php echo $data->perihal ?></textarea>

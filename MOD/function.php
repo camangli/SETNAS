@@ -1,4 +1,7 @@
 <?php
+if ($_GET["hal"]=="logout"){
+    logout();
+}
 function connect(){
     $sname = "localhost";
     $uname = "root";
@@ -46,9 +49,21 @@ function ibagian($id){
     return $nama;
 }
 function tanggal($dttgl){
+    date_default_timezone_set("Asia/Jakarta");
     $atgl = date_create("$dttgl");
     $ftgl = date_format($atgl, "d F Y");
     return $ftgl;
 }
+function tglwkt($tglwkt){
+    date_default_timezone_set("Asia/Jakarta");
+    $atgl = date_create("$tglwkt");
+    $ftgl = date_format($atgl, "H:i");
+    return $ftgl;
+}
+function logout(){
+    session_start();
+    session_destroy();
+}
+
 
 ?>
