@@ -61,6 +61,10 @@
                         include "FORMULIR/frupdatesuratkeluar.php";
                     }else if ($_GET["hal"]=="Pengiriman"){
                         include "FORMULIR/frpengiriman.php";
+                    }else if ($_GET["hal"]=="UpdatePengiriman"){
+                        include "FORMULIR/frupdatepengiriman.php";
+                    }else if ($_GET["hal"]=="hapus"){
+                        include "MOD/hapus.php";
                     }
                 ?>
             </div>

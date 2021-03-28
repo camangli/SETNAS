@@ -192,6 +192,21 @@ body{
     transition: 0.4s;
     margin: 2px;
 }
+.terkirim{
+    font-weight: bold;
+    color: #065e06 !important;
+}
+.belumterkirim{
+    font-weight: bold;
+    color: #af0707 !important;
+}
+.terkirim:hover{
+    background: none !important;
+}
+.belumterkirim:hover{
+    background: none !important;
+}
+
 .c-mn-cb-pnl{
     margin: 20px 10px;
 }
@@ -393,6 +408,7 @@ body{
     padding: 20px;
     margin: 30px 0px;
 }
+
 .nameFrame{
     position: absolute;
     font-weight: bold;
@@ -446,6 +462,7 @@ body{
     width: 60px;
     resize: none;
     overflow: hidden;
+    outline: none;
     border: none;
     float: right;
     background-color:#fff ;
@@ -482,4 +499,33 @@ body{
     margin: 3px 0;
     font-size: 12px;
     color: rgb(117, 117, 117);
+}
+.c-src{
+    padding: 9px;
+}
+.c-src .btn{
+    margin: 0 10px;
+}
+form{
+    margin: 0;
+    padding: 0;
+}
+.c-tgp-src input[type=submit]{
+    height:37px;
+    width: 30px;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    border: none;
+    float: right;
+    background-color:#fff ;
+    background-image: url(../IMG/asset/icbck.png);
+    background-size: 550px;
+    background-position: 490px -270px;
+    overflow: hidden;
+
+}
+.c-tgp-src input[type=text]{
+    border:none;
+    outline: none;
 }

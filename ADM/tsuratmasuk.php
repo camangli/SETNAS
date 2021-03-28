@@ -1,5 +1,15 @@
-<div class="c-mn-cb-pnl">
-    <a  class="mn-cb-pnl" href="?hal=BuatDisposisi"><span class="lg-m tbh"></span>Buat Disposisi</a>
+<div class="flex">
+    <div>
+        <div class="c-mn-cb-pnl">
+        <a  class="mn-cb-pnl" href="?hal=BuatDisposisi"><span class="lg-m tbh"></span>Buat Disposisi</a>
+        </div>
+    </div>
+    <div class="c-src">
+        <form action="#" class="brsol brad c-tgp-src">
+            <input type="text" class="inpt" placeholder="Cari Surat" name="cari"/>
+            <input type="submit" value="">   
+        </form>
+    </div>
 </div>
 <table>
     <tr>

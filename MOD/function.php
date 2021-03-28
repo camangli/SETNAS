@@ -34,6 +34,10 @@ function iuser($id){
     $nama = $pos->nama;
     return $nama;
 }
+
+function iduser($id){
+    return $id;
+}
 function ibagian($id){
     $con = connect();
     $dt = mysqli_query($con, "select * from karyawan where id_karyawan='$id'");
@@ -41,6 +45,10 @@ function ibagian($id){
     $nama = $pos->jabatan;
     return $nama;
 }
-
+function tanggal($dttgl){
+    $atgl = date_create("$dttgl");
+    $ftgl = date_format($atgl, "d F Y");
+    return $ftgl;
+}
 
 ?>

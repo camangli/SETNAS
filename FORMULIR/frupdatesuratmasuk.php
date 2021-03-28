@@ -118,6 +118,6 @@
         <textarea placeholder="Perihal" class="txtarea brad brsol"></textarea>
         <h3>File Surat</h3>
         <input type="file" class="brad brsol inpt"/><br>
-        <input type="submit" class="btn brsad" value="Input Surat"/>
+        <input type="submit" class="btn brsad" value="Update Surat"/>
     </form>
 </div>

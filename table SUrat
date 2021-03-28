@@ -77,7 +77,10 @@ CREATE TABLE pengiriman
   id_suratkeluar INT NULL     COMMENT 'auto increment',
   id_karyawan    INT NULL     COMMENT 'auto increment',
   nama_penerima  VARCHAR(50)    NULL    ,
+  jabatan_penerima  VARCHAR(50)    NULL    ,
   tanggal_kirim  DATE   NULL    ,
+  kontak_penerima  VARCHAR(50)    NULL    ,
+  nama_file  VARCHAR(50)    NULL    ,
   PRIMARY KEY (id_pengiriman), FOREIGN KEY (id_suratkeluar) REFERENCES suratkeluar(id_suratkeluar), FOREIGN KEY (id_karyawan) REFERENCES karyawan(id_karyawan)
 );
 

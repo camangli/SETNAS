@@ -1,7 +1,7 @@
 </script>
 <div class="c-tp-pnl">
     <h1>INPUT DATA SURAT KELUAR</h1>
-    <form action="MOD/upload.php" method="POST" enctype="multipart/form-data">
+    <form action="MOD/upload.php?hal=InputSuratKeluar&" method="POST" enctype="multipart/form-data">
         <div class="flex">
             <div>
                 <h3>No. Surat</h3>
