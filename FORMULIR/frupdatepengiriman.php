@@ -14,7 +14,7 @@ $jml = mysqli_num_rows($q2);
 $data2 = mysqli_fetch_object($q2);
 ?>
 <div class="c-tp-pnl">
-    <h1>UPLOAD BUKTI PENGIRIMAN SURAT KELUAR</h1>
+    <h1>PENGIRIMAN SURAT KELUAR</h1>
     <div class="flex">
             <div>
                 <h3>No. Surat</h3>

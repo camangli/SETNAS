@@ -8,7 +8,7 @@
 <div class="flex">
     <div>
         <div class="c-mn-cb-pnl">
-            <a  class="mn-cb-pnl" href="?hal=BuatDisposisi"><span class="lg-m tbh"></span>Buat Disposisi</a>
+            <a  class="mn-cb-pnl" href="?hal=BuatDisposisi"><span class="lg tbh"></span>Buat Disposisi</a>
         </div>
     </div>
     <div>
@@ -87,7 +87,7 @@
                     <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
                     <td style='width: 100px;'>$data2->tanggal_surat</td>
                     <td>$data2->perihal</td>
-                    <td style='width: 80px;'><a href='?hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
+                    <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr> ";
                     $no2++;
                 }
@@ -110,7 +110,7 @@
                         <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
                         <td style='width: 100px;'>$data2->tanggal_surat</td>
                         <td>$data2->perihal</td>
-                        <td style='width: 80px;'><a href='?hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></span>Detail</a></td>
+                        <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></span>Detail</a></td>
                     </tr> ";
                     $no2++;
                 }
@@ -133,7 +133,7 @@
                         <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
                         <td style='width: 100px;'>$data2->tanggal_surat</td>
                         <td>$data2->perihal</td>
-                        <td style='width: 80px;'><a href='?hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
+                        <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr> ";
                     $no2++;
                 }

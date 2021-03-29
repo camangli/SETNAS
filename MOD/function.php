@@ -48,6 +48,15 @@ function ibagian($id){
     $nama = $pos->jabatan;
     return $nama;
 }
+
+function foto($id){
+    $con = connect();
+    $dt = mysqli_query($con, "select * from karyawan where id_karyawan='$id'");
+    $pos = mysqli_fetch_object($dt);
+    $nama = $pos->foto;
+    return $nama;
+}
+
 function tanggal($dttgl){
     date_default_timezone_set("Asia/Jakarta");
     $atgl = date_create("$dttgl");

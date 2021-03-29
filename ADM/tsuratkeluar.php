@@ -8,11 +8,11 @@
 <div class="flex">
     <div>
         <div class="c-mn-cb-pnl">
-            <a  class="mn-cb-pnl" href="?hal=SuratBaru"><span class="lg-m tbh"></span>Surat Baru</a>
+            <a  class="mn-cb-pnl" href="?page=SuratMenyurat&hal=SuratBaru"><span class="lg tbh"></span>Surat Baru</a>
         </div>
     </div>
     <div>
-    <form action="?hal=SuratKeluar" method="POST" enctype="multipart/form-data">
+    <form action="?page=SuratMenyurat&hal=SuratKeluar" method="POST" enctype="multipart/form-data">
        <div class="flex">
         <div class="c-src">
             <div class="brsol brad c-tgp-src">
@@ -92,16 +92,16 @@
                     $sql3 = mysqli_query($con, "select * from pengiriman where id_suratkeluar='$data2->id_suratkeluar'");
                     $jml = mysqli_num_rows($sql3);
                     if ($jml == 1){
-                     $stts = "<p><a class='terkirim' href=?hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m stj'></span>Terkirim</a></p></td>";
+                     $stts = "<p><a class='terkirim' href=?page=SuratMenyurat&hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m stj'></span>Terkirim</a></p></td>";
                     }else{
-                     $stts = "<p><a class='belumterkirim' href=?hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m tstj'></span>Belum</a></p></td>";   
+                     $stts = "<p><a class='belumterkirim' href=?page=SuratMenyurat&hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m tstj'></span>Belum</a></p></td>";   
                     }
                     echo "<tr>
                     <td style='width: 150px;'>$data2->no_surat</td>
                     <td style='width: 200px;'>$data2->nama_tujuan<br><b>$data2->jabatan_tujuan<br>$data2->instansi_tujuan</b></td>
                     <td>$data2->perihal</td>
                     <td style='width: 80px;'>$stts
-                    <td style='width: 80px;'><a href='?hal=DetailSuratKeluar&id=$data2->id_suratkeluar' class='net'><span class='lg-m dtl'></span>Detail</a></td>
+                    <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratKeluar&id=$data2->id_suratkeluar' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr>";
                     $no2++;
                 }
@@ -121,16 +121,16 @@
                     $sql3 = mysqli_query($con, "select * from pengiriman where id_suratkeluar='$data2->id_suratkeluar'");
                     $jml = mysqli_num_rows($sql3);
                     if ($jml == 1){
-                     $stts = "<p><a class='terkirim' href=?hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m stj'></span>Terkirim</a></p></td>";
+                     $stts = "<p><a class='terkirim' href=?page=SuratMenyurat&hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m stj'></span>Terkirim</a></p></td>";
                     }else{
-                     $stts = "<p><a class='belumterkirim' href=?hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m tstj'></span>Belum</a></p></td>";   
+                     $stts = "<p><a class='belumterkirim' href=?page=SuratMenyurat&hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m tstj'></span>Belum</a></p></td>";   
                     }
                     echo "<tr>
                     <td style='width: 150px;'>$data2->no_surat</td>
                     <td style='width: 200px;'>$data2->nama_tujuan<br><b>$data2->jabatan_tujuan<br>$data2->instansi_tujuan</b></td>
                     <td>$data2->perihal</td>
                     <td style='width: 80px;'>$stts
-                    <td style='width: 80px;'><a href='?hal=DetailSuratKeluar&id=$data2->id_suratkeluar' class='net'><span class='lg-m dtl'></span>Detail</a></td>
+                    <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratKeluar&id=$data2->id_suratkeluar' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr>";
                     $no2++;
                 }
@@ -150,16 +150,16 @@
                     $sql3 = mysqli_query($con, "select * from pengiriman where id_suratkeluar='$data2->id_suratkeluar'");
                     $jml = mysqli_num_rows($sql3);
                     if ($jml == 1){
-                     $stts = "<p><a class='terkirim' href=?hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m stj'></span>Terkirim</a></p></td>";
+                     $stts = "<p><a class='terkirim' href=?page=SuratMenyurat&hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m stj'></span>Terkirim</a></p></td>";
                     }else{
-                     $stts = "<p><a class='belumterkirim' href=?hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m tstj'></span>Belum</a></p></td>";   
+                     $stts = "<p><a class='belumterkirim' href=?page=SuratMenyurat&hal=Pengiriman&id=$data2->id_suratkeluar><span class='lg-m tstj'></span>Belum</a></p></td>";   
                     }
                     echo "<tr>
                     <td style='width: 150px;'>$data2->no_surat</td>
                     <td style='width: 200px;'>$data2->nama_tujuan<br><b>$data2->jabatan_tujuan<br>$data2->instansi_tujuan</b></td>
                     <td>$data2->perihal</td>
                     <td style='width: 80px;'>$stts
-                    <td style='width: 80px;'><a href='?hal=DetailSuratKeluar&id=$data2->id_suratkeluar' class='net'><span class='lg-m dtl'></span>Detail</a></td>
+                    <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratKeluar&id=$data2->id_suratkeluar' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr>";
                     $no2++;
                 }

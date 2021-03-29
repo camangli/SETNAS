@@ -51,7 +51,7 @@ $data = mysqli_fetch_object($q);
                 </tr>
             </table>
             <div class="c-mn-cb-pnl">
-            <a href="?hal=UpdateSuratMasuk&id=<?php echo $data->id_suratmasuk ?>" class="mn-cb-pnl net"><span class="lg-m ubh"></span>Edit</a>
+            <a href="?page=SuratMenyurat&hal=UpdateSuratMasuk&id=<?php echo $data->id_suratmasuk ?>" class="mn-cb-pnl net"><span class="lg-m ubh"></span>Edit</a>
             <a href="ADM/DATA/SuratMasuk/<?php echo $data->nama_file ?>" target="_blank" class="mn-cb-pnl net"><span class="lg-m ctk"></span>Cetak</a>
             <a href="MOD/hapus.php?q=SuratMasuk&id=<?php echo $data->id_suratmasuk ?>" class="mn-cb-pnl alrt"><span class="lg-m hps"></span>Hapus</a>
             </div>

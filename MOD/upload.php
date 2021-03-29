@@ -36,24 +36,24 @@ include "../MOD/session.php";
         $mv_doc = move_uploaded_file($ad_doc, "../ADM/DATA/SuratKeluar/".$fn_doc);  
         $sql = "insert into suratkeluar(no_surat, tanggal_surat, kepengurusan, nama_pengirim, jabatan_pengirim, nama_tujuan, jabatan_tujuan, instansi_tujuan, perihal, nama_file)values('$nosurat','$tanggal','$jenis','$namapengirim', '$jabatanpengirim','$namatujuan', '$jabatantujuan', '$instansi', '$perihal', '$fn_doc');";
         $result = mysqli_query($con, $sql);
-        header("location: ../?hal=SuratKeluar", true, 301);
+        header("location: ../?page=SuratMenyurat&hal=SuratKeluar", true, 301);
         exit();
     }else if ($hal == "InputPengiriman"){
         $mv_doc = move_uploaded_file($ad_doc, "../ADM/DATA/BuktiPengiriman/".$fn_doc);  
         $sql = "insert into pengiriman (id_suratkeluar, id_karyawan, nama_penerima, jabatan_penerima, tanggal_kirim, kontak_penerima, nama_file)values('$idsurat','$idkar','$namapenerima','$jabatanpenerima','$tanggal', '$kontak', '$fn_doc');";
         $result = mysqli_query($con, $sql);
-        header("location: ../?hal=Pengiriman&id=$idsurat", true, 301);
+        header("location: ../?page=SuratMenyurat&hal=Pengiriman&id=$idsurat", true, 301);
         exit();
     }else if ($hal == "InputSuratMasuk"){
         $mv_doc = move_uploaded_file($ad_doc, "../ADM/DATA/SuratMasuk/".$fn_doc);  
         $sql = "insert into suratmasuk (no_agenda, no_surat, tanggal_masuk, tanggal_surat, jenis_surat, nama, jabatan, instansi, perihal, nama_file)values('$noagenda','$nosurat', '$tanggal', '$tanggalsurat', '$jenis','$namapengirim','$jabatanpengirim', '$instansi', '$perihal', '$fn_doc')";
         $result = mysqli_query($con, $sql);
-        header("location: ../?hal=SuratMasuk", true, 301);
+        header("location: ../?page=SuratMenyurat&hal=SuratMasuk", true, 301);
         exit();
     }else if ($hal == "Tanggapan"){  
         $sql = "insert into tanggapan (id_karyawan, id_suratmasuk, tanggapan, waktu_tanggapan)values('$idkar','$idsurat', '$tanggapan', '$tglwkt')";
         $result = mysqli_query($con, $sql);
-        header("location: ../?hal=DetailSuratMasuk&id=$idsurat", true, 301);
+        header("location: ../?page=SuratMenyurat&hal=DetailSuratMasuk&id=$idsurat", true, 301);
         exit();
     }else {
         echo "end";

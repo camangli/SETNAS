@@ -56,8 +56,8 @@ $data = mysqli_fetch_object($q);
                 </tr>
             </table>
             <div class="c-mn-cb-pnl">
-                <a href="?hal=Pengiriman&id=<?php echo $data->id_suratkeluar ?>" class="mn-cb-pnl net"><span class="lg-m send"></span>Pengiriman</a>
-                <a href="?hal=UpdateSuratKeluar&id=<?php echo $data->id_suratkeluar ?>" class="mn-cb-pnl net"><span class="lg-m ubh"></span>Edit</a>
+                <a href="?page=SuratMenyurat&hal=Pengiriman&id=<?php echo $data->id_suratkeluar ?>" class="mn-cb-pnl net"><span class="lg-m send"></span>Pengiriman</a>
+                <a href="?page=SuratMenyurat&hal=UpdateSuratKeluar&id=<?php echo $data->id_suratkeluar ?>" class="mn-cb-pnl net"><span class="lg-m ubh"></span>Edit</a>
                 <a href="ADM/DATA/SuratKeluar/<?php echo $data->nama_file ?>" target="_blank" class="mn-cb-pnl net"><span class="lg-m ctk"></span>Cetak</a>
                 <a href="MOD/hapus.php?q=SuratKeluar&id=<?php echo $data->id_suratkeluar ?>" class="mn-cb-pnl alrt"><span class="lg-m hps"></span>Hapus</a>
             </div>
