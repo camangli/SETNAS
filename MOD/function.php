@@ -60,8 +60,24 @@ function foto($id){
 function tanggal($dttgl){
     date_default_timezone_set("Asia/Jakarta");
     $atgl = date_create("$dttgl");
-    $ftgl = date_format($atgl, "d F Y");
-    return $ftgl;
+    $ftgl = date_format($atgl, "Y-m-d");
+    $bulan = array (
+        1 =>   'Januari',
+        'Februari',
+        'Maret',
+        'April',
+        'Mei',
+        'Juni',
+        'Juli',
+        'Agustus',
+        'September',
+        'Oktober',
+        'November',
+        'Desember'
+        );
+        
+        $pecah = explode('-', $ftgl);
+        return $pecah[2] . ' ' . $bulan[ (int)$pecah[1] ] . ' ' . $pecah[0];
 }
 function tglwkt($tglwkt){
     date_default_timezone_set("Asia/Jakarta");

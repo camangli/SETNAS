@@ -105,9 +105,6 @@ include "../MOD/function.php";
             $mv_doc = move_uploaded_file($ad_doc, "../IMG/asset/Profile/".$fn_doc);       
             $sql = "update karyawan set nama='$namapegawai', $inbagian jabatan='$jabatanpegawai', no_telp='$notelp', email='$email', alamat='$alamat', foto='$fn_doc' where id_karyawan='$idv'";
             if(md5($paslama) == $data->password){
-                $sql3 = "select * from user where id_karyawan='$idv'";
-                $q = mysqli_query($con, $sql3);
-                $data2 = mysqli_fetch_object($q);
                 $upsas = md5($pasbaru);
                 $sqlpas = "update user set password='$upsas' where id_user='$data2->id_user'";
                 $resultpas = mysqli_query($con, $sqlpas);

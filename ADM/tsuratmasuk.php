@@ -8,11 +8,11 @@
 <div class="flex">
     <div>
         <div class="c-mn-cb-pnl">
-            <a  class="mn-cb-pnl" href="?hal=BuatDisposisi"><span class="lg tbh"></span>Buat Disposisi</a>
+            <a  class="mn-cb-pnl" href="?page=SuratMenyurat&hal=BuatDisposisi"><span class="lg tbh"></span>Buat Disposisi</a>
         </div>
     </div>
     <div>
-    <form action="?hal=SuratMasuk" method="POST" enctype="multipart/form-data">
+    <form action="?page=SuratMenyurat&hal=SuratMasuk" method="POST" enctype="multipart/form-data">
        <div class="flex">
         <div class="c-src">
             <div class="brsol brad c-tgp-src">
@@ -81,11 +81,12 @@
                 $no2 = 1;
                 $sql2 = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'and $qw like '%$qcari%'");
                 while($data2 = mysqli_fetch_object($sql2)){
+                    $tglformat = tanggal($data2->tanggal_surat);
                     echo "
                     <tr>
                     <td style='width: 150px;'>$data2->no_surat</td>
                     <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
-                    <td style='width: 100px;'>$data2->tanggal_surat</td>
+                    <td style='width: 100px;'>$tglformat</td>
                     <td>$data2->perihal</td>
                     <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr> ";
@@ -104,13 +105,14 @@
                 $no2 = 1;
                 $sql2 = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'");
                 while($data2 = mysqli_fetch_object($sql2)){
+                    $tglformat = tanggal($data2->tanggal_surat);
                     echo "
                     <tr>
-                        <td style='width: 150px;'>$data2->no_surat</td>
-                        <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
-                        <td style='width: 100px;'>$data2->tanggal_surat</td>
-                        <td>$data2->perihal</td>
-                        <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></span>Detail</a></td>
+                    <td style='width: 150px;'>$data2->no_surat</td>
+                    <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
+                    <td style='width: 100px;'>$tglformat</td>
+                    <td>$data2->perihal</td>
+                    <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr> ";
                     $no2++;
                 }
@@ -127,13 +129,14 @@
                 $no2 = 1;
                 $sql2 = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'");
                 while($data2 = mysqli_fetch_object($sql2)){
+                    $tglformat = tanggal($data2->tanggal_surat);
                     echo "
                     <tr>
-                        <td style='width: 150px;'>$data2->no_surat</td>
-                        <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
-                        <td style='width: 100px;'>$data2->tanggal_surat</td>
-                        <td>$data2->perihal</td>
-                        <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
+                    <td style='width: 150px;'>$data2->no_surat</td>
+                    <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
+                    <td style='width: 100px;'>$tglformat</td>
+                    <td>$data2->perihal</td>
+                    <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
                     </tr> ";
                     $no2++;
                 }

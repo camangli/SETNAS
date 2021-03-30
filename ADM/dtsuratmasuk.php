@@ -20,7 +20,7 @@ $data = mysqli_fetch_object($q);
             </div>
             <div>
                 <h3>Tanggal Masuk</h3>
-                <p class="brad brsol inpt"><?php echo $data->tanggal_masuk ?></p>
+                <p class="brad brsol inpt"><?php echo tanggal($data->tanggal_masuk) ?></p>
             </div>
         </div>
         <div class="c-frame brad brsol">
@@ -28,7 +28,7 @@ $data = mysqli_fetch_object($q);
             <table>
                 <tr>
                     <td>Tanggal Surat</td>
-                    <td>: <?php echo $data->tanggal_surat ?></td>
+                    <td>: <?php echo tanggal($data->tanggal_surat) ?></td>
                 </tr>
                 <tr>
                     <td>No. Surat</td>
@@ -53,7 +53,7 @@ $data = mysqli_fetch_object($q);
             <div class="c-mn-cb-pnl">
             <a href="?page=SuratMenyurat&hal=UpdateSuratMasuk&id=<?php echo $data->id_suratmasuk ?>" class="mn-cb-pnl net"><span class="lg-m ubh"></span>Edit</a>
             <a href="ADM/DATA/SuratMasuk/<?php echo $data->nama_file ?>" target="_blank" class="mn-cb-pnl net"><span class="lg-m ctk"></span>Cetak</a>
-            <a href="MOD/hapus.php?q=SuratMasuk&id=<?php echo $data->id_suratmasuk ?>" class="mn-cb-pnl alrt"><span class="lg-m hps"></span>Hapus</a>
+            <?php echo "<a onClick=\"javascript: return confirm('Apakah Yakin Akan Menghapus Surat');\" href='MOD/hapus.php?q=SuratMasuk&id=$data->id_suratmasuk' class='mn-cb-pnl alrt'><span class='lg-m hps'></span>Hapus</a>";?>
             </div>
         </div>
         <div class="c-frame brad brsol pengirim">
@@ -74,14 +74,16 @@ $data = mysqli_fetch_object($q);
                             }else{
                                 $vtgl = "$tglonly, $tglwkt";
                             }
-                            if($idkar == $data3->id_karyawan){
+                            if($data3->id_karyawan == $idkar){
                                 $del =  " - <a class='plc-hps' href='MOD/hapus.php?q=Tanggapan&id=$data2->id_tanggapan'>Hapus</a>";
+                            } else {
+                                $del = "";
                             }
                             echo "
                             <div class='i-tgp'>
                                 <h4>$data3->nama</h4>
                                 <p>$data2->tanggapan</p>
-                                <p class='plc'>$vtgl $del</p>
+                                <p class='plc'>$vtgl WIB $del</p>
                             </div>";
                         }
                     ?>

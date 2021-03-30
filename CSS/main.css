@@ -234,6 +234,7 @@ body{
     padding: 7px;
     border-radius: 4px;
     transition: 0.4s;
+    white-space: pre;
 }
 .mn-cb-pnl:hover{
     background: #6497da;
@@ -534,6 +535,10 @@ body{
     color: rgb(255, 0, 0);
 }
 .c-src{
+    padding: 9px;
+}
+.c-src:last-child{
+    width: 417px;
     padding: 9px;
 }
 .c-src .btn{

@@ -22,7 +22,7 @@ $data2 = mysqli_fetch_object($q2);
             </div>
             <div>
                 <h3>Tanggal Surat</h3>
-                <p class="brad brsol inpt"><?php echo $data->tanggal_surat ?></p>
+                <p class="brad brsol inpt"><?php echo tanggal($data->tanggal_surat) ?></p>
             </div>
         </div>
         <div class="c-frame brad brsol">

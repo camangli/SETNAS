@@ -1,9 +1,8 @@
 <html>
 <head>
-    <link rel="stylesheet" href="/SETNAS/CSS/main.css">
-    <script>
-       
-    </script>
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>SETNAS</title>
+    <link rel="icon" href="IMG/asset/logo.png">
     <?php
         include "MOD/function.php";
         include "MOD/session.php";
