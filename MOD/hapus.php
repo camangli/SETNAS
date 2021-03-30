@@ -24,5 +24,12 @@ if ($qv == "SuratKeluar"){
     $data = mysqli_fetch_object($q);
     mysqli_query($con, "delete from tanggapan where id_tanggapan='$idv'");
     header("location: ../?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data->id_suratmasuk", true, 301);
+}else if ($qv == "Karyawan"){
+    $sql = "select * from karyawan where id_karyawan='$idv'";
+    $q = mysqli_query($con, $sql);
+    $data = mysqli_fetch_object($q);
+    unlink("../IMG/asset/Profile/$data->foto");
+    mysqli_query($con, "delete from karyawan where id_karyawan='$idv'");
+    header("location: ../?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data->id_suratmasuk", true, 301);
 }
 ?>

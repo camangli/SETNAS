@@ -14,6 +14,8 @@ $data = mysqli_fetch_object($q);
     <?php
         if($_GET["hal"]=="UpdatePegawai"){
             include "FORMULIR/frupdatepegawai.php";
+        }else if($_GET['hal']== 'TambahKaryawan'){
+            include "FORMULIR/frpegawai.php";
         }else{
             include "UMUM/crdpegawai.php";
         } 

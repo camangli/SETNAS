@@ -63,6 +63,7 @@ body{
 .ft-p {
     width: 100%;
     height: 100%;
+    min-width: 150px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -374,6 +375,9 @@ body{
 .conf{
    background: #2a9df4; 
 }
+.red{
+    color: #af0707 !important;
+}
 /*formulir*/
 .inpt {
     padding: 8px 5px;
@@ -570,4 +574,77 @@ form{
     border:none;
     outline: none;
     width: 175px;
+}
+
+/*Dasboard*/
+.das{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+}
+.das h1{
+    color: #fff;
+    font-size: 800%;
+    margin: 0;
+    padding: 0;
+}
+.c-das{
+    flex-grow: 1;
+    height: 150px;
+    min-width: 200px;
+    max-width: 250px;
+    margin: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+.c-das h3{
+    color: #fff;
+    font-size: 150%;
+    margin: 0;
+    padding: 20px 0px 0px 0px !important; 
+}
+.d-das{
+    flex-grow: 1;
+    overflow: hidden;
+}
+.d-das h3{
+    color: #fff;
+    font-size: 250% !important;
+    margin: 0;
+    padding: 10px 0px !important;
+}
+.d-das:first-child{
+    max-width: 130px;
+}
+.das-bl{
+    background-color: #2a9df4;
+    border-bottom: #1a5b8d 25px solid;
+    background-image: url(../IMG/asset/srtmsk.png);
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position: -10px 7px;
+}
+.das-rd{
+    background-color:#ff4136;
+    border-bottom: #dd2218 25px solid;
+    background-image: url(../IMG/asset/srtklr.png);
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position: -10px 15px;
+}
+.das-gr{
+    background-color:greenyellow;
+    border-bottom: rgb(126, 190, 29) 25px solid;
+    background-image: url(../IMG/asset/srtmsk.png);
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position: -10px 7px;
+}
+.das-yl{
+    background-color:gold;
+    border-bottom: rgb(201, 171, 0) 25px solid;
+    background-image: url(../IMG/asset/srtklr.png);
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position: -10px 15px;
 }

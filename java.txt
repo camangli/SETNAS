@@ -47,3 +47,9 @@
             document.getElementById("nosurat").value = this.responseText+"/"+jenis+"/"+romanbulan+"/"+bulan.getFullYear();
 
     }
+    
+    else if(valpas == null){
+                                        document.getElementById("valpasbaru").style.backgroundColor = "white";
+                                        document.getElementById("submit").disabled = false;
+                                        document.getElementById("plc").style.visibility = "hidden";
+                                    }

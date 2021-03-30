@@ -20,8 +20,19 @@ include "../MOD/session.php";
     $jabatanpenerima = $_POST['jabatanpenerima']; //frpengiriman
     $kontak = $_POST['kontak']; //frpengiriman
     $tanggapan = $_POST['tanggapan']; //frtanggapan
-
     $perihal = $_POST['perihal'];
+
+    //pegawai
+    $namapegawai = $_POST['nama'];
+    $idbagian = $_POST['bagian'];
+    $jabatanpegawai = $_POST['jabatan'];
+    $notelp = $_POST['notelp'];
+    $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
+    $username = $_POST['userid'];
+    $paslama = $_POST['paslama'];
+    $pasbaru = $_POST['pasbaru'];
+
     $in_doc = $_FILES['namafile']['name'];
     $ad_doc = $_FILES['namafile']['tmp_name'];
     $ext = explode('.', $in_doc);
@@ -54,6 +65,20 @@ include "../MOD/session.php";
         $sql = "insert into tanggapan (id_karyawan, id_suratmasuk, tanggapan, waktu_tanggapan)values('$idkar','$idsurat', '$tanggapan', '$tglwkt')";
         $result = mysqli_query($con, $sql);
         header("location: ../?page=SuratMenyurat&hal=DetailSuratMasuk&id=$idsurat", true, 301);
+        exit();
+    }else if ($hal == "Pegawai"){  
+        $sql = "insert into karyawan (id_bagian, nama, jabatan, alamat, no_telp, email, foto)values('$idbagian','$namapegawai', '$jabatanpegawai', '$alamat', '$notelp', '$email', '$fn_doc')";
+        $result = mysqli_query($con, $sql);
+        if($result){
+            $sql2 = "select * from karyawan order by id_karyawan desc limit 1";
+            $q = mysqli_query($con, $sql2);
+            $data = mysqli_fetch_object($q);
+            $upsas = md5($pasbaru);
+            $sql3 = "insert into user (id_user, id_karyawan, password)values('$username', '$data->id_karyawan','$upsas')";
+            $upuser = mysqli_query($con, $sql3);
+        }
+        $mv_doc = move_uploaded_file($ad_doc, "../IMG/asset/Profile/".$fn_doc); 
+        header("location: ../?page=Kepegawaian", true, 301);
         exit();
     }else {
         echo "end";
