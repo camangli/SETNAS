@@ -23,7 +23,7 @@ function ceklogin($username, $pwd){
 	$_SESSION['login'] = true;
 	$_SESSION['name'] = $username;
 	$_SESSION['id'] = $id;
-	header("location: ../../SETNAS/?hal=home", true, 301);
+	header("location: ../../SETNAS/?page=home", true, 301);
     }else{
 
         echo "<script language='javascript'>alert('Usernama atau password salah')</script>";

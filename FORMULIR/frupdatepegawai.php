@@ -81,12 +81,10 @@ function previewImage() {
                     <p class="nameframe">User Login</p>
                     <h3>User ID</h3>
                     <input type="text" class="brad brsol inpt" placeholder="User ID" name="userid" value="<?php echo $data2->id_user ?>" <?php echo $disable ?>/>
+                    <h3>Password Lama</h3>
+                    <input type="password" class="brad brsol inpt" placeholder="Password Lama" name="paslama" />
                     <div class="flex">
                         <div>
-                        <h3>Password Lama</h3>
-                            <input type="password" class="brad brsol inpt" placeholder="Password Lama" name="paslama" />
-                        </div>
-                        <div style="margin-left: 20px;">
                             <h3>Password Baru</h3>
                             <input type="password" class="brad brsol inpt" placeholder="Password Baru" name="pasbaru" id="pasbaru" oninput="valpass()" />
                         </div>
@@ -110,7 +108,7 @@ function previewImage() {
                             <input type="password" class="brad brsol inpt" placeholder="Validasi Password Baru" id="valpasbaru" name="valpasbaru" oninput="valpass()" />
                             <p id="plc" style="visibility: hidden;" class="plc red">Password tidak sama!</p>
                         </div>
-                    </div>
+                </div>
             </div>
         <input type="submit" id="submit" class="btn brsad" value="Ubah Data"/>
     </form>
