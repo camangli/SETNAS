@@ -104,5 +104,5 @@ function previewImage() {
                         </div>
                     </div>
             </div>
-        <input type="submit" id="submit" class="btn brsad" value="Ubah Data"/>
+        <input type="submit" id="submit" class="btn brsad" value="Tambah Data"/>
     </form>
