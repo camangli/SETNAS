@@ -9,7 +9,7 @@
 <div id="container">
 <div id="mainLog">
 <div id="coninp">
-    <h1>MyLogin</h1>
+    <h1>SETNAS INKINDO</h1>
     <form action="MOD/ceklogin.php" method="post">
         <input type="text" name="user" id="user" class="Baginputu" placeholder="User">
         <input type="password" name="pass" id="pass" class="Baginputb" placeholder="Password">
