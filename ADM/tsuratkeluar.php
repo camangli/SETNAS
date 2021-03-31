@@ -1,10 +1,11 @@
 <?php
-    if(isset($_POST['cari']) && isset($_POST['tglawal']) && isset($_POST['tglakhir']))
     $con = connect();
     $no = 1;
-    $qcari = $_POST['cari'];
-    $tglawal = $_POST['tglawal'];
-    $tglakhir = $_POST['tglakhir'];
+    if(isset($_POST['cari']) && isset($_POST['tglawal']) && isset($_POST['tglakhir'])){
+        $qcari = $_POST['cari'];
+        $tglawal = $_POST['tglawal'];
+        $tglakhir = $_POST['tglakhir'];
+    }
 ?>
 <div class="flex">
     <div>
