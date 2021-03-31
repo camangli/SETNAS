@@ -1,4 +1,5 @@
 <?php
+if(isset($_GET['hal']))
 if ($_GET['hal']=="logout"){
     logout();
 }

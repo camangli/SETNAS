@@ -26,7 +26,7 @@ $idkar = $_SESSION['id'];
             <p class='nameframe'>Biodata</p>
             <table>
                 <tr>
-                    <td rowspan='7' style='height:150px; padding-right:20px;'><div class='ft-p'><img src='../SETNAS/IMG/asset/Profile/$data->foto'></div></td>
+                    <td rowspan='7' style='height:150px; padding-right:20px;'><div class='ft-p'><img src='../IMG/asset/Profile/$data->foto'></div></td>
                 </tr>
                 </tr>
                     <td>User ID</td>

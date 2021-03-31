@@ -44,13 +44,14 @@
         </div>
         <div class="r-con brad brsol">
             <?php
-                if($_GET['page'] == 'SuratMenyurat'){
-                    include 'ADM/SuratMenyurat.php';
-                }else if($_GET['page']== 'Kepegawaian'){
-                    include "UMUM/dtpegawai.php";
-                }else{
-                    include "home.html";
-                }
+                if (isset($_GET['page']))
+                    if($_GET['page'] == 'SuratMenyurat'){
+                        include 'ADM/SuratMenyurat.php';
+                    }else if($_GET['page']== 'Kepegawaian'){
+                        include "UMUM/dtpegawai.php";
+                    }else{
+                        include "home.html";
+                    }
             ?>
         </div>
     </div>
