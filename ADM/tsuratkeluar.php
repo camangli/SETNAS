@@ -1,4 +1,5 @@
 <?php
+    if(isset($_POST['cari']) && isset($_POST['tglawal']) && isset($_POST['tglakhir']))
     $con = connect();
     $no = 1;
     $qcari = $_POST['cari'];
