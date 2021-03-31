@@ -23,11 +23,11 @@ function ceklogin($username, $pwd){
 	$_SESSION['login'] = true;
 	$_SESSION['name'] = $username;
 	$_SESSION['id'] = $id;
-	header("location: ?page=home", true, 301);
+	header("location: ../?page=home", true, 301);
     }else{
 
         echo "<script language='javascript'>alert('Usernama atau password salah')</script>";
-        header("location: f-login.php", true, 301);
+        header("location: ../f-login.php", true, 301);
     }
 }
 function iuser($id){
