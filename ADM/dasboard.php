@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set("Asia/Jakarta");
 $con = connect();
 $sqlttlkeluar = "select * from suratkeluar";
 $totalkeluar = mysqli_query($con, $sqlttlkeluar);
