@@ -1,5 +1,5 @@
 <?php
-include "../MOD/function.php";
+include "../../MOD/function.php";
 
 $con = connect();
 $sqlttlkeluar = "select * from suratkeluar";
