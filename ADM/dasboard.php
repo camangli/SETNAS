@@ -15,6 +15,7 @@ $masuknow = mysqli_query($con, $sqlmasuknow);
 
 ?>
 <div class="flex">
+    <a href="?page=SuratMenyurat&hal=SuratMasuk">
     <div class="c-das das-bl brad bshad">
         <h3>Hari ini</h3>
         <div class="das flex">
@@ -22,6 +23,8 @@ $masuknow = mysqli_query($con, $sqlmasuknow);
             <div class="d-das"><h1><?php echo mysqli_num_rows($masuknow) ?></h1></div>
         </div>
     </div>
+    </a>
+    <a href="?page=SuratMenyurat&hal=SuratKeluar">
     <div class="c-das das-rd brad bshad">
         <h3>Hari ini</h3>
         <div class="das flex">
@@ -29,6 +32,8 @@ $masuknow = mysqli_query($con, $sqlmasuknow);
             <div class="d-das"><h1><?php echo mysqli_num_rows($keluarnow) ?></h1></div>
         </div>
     </div>
+    </a>
+    <a href="?page=SuratMenyurat&hal=SuratMasuk">
     <div class="c-das das-gr brad bshad">
         <h3>Total</h3>
         <div class="das flex">
@@ -36,6 +41,8 @@ $masuknow = mysqli_query($con, $sqlmasuknow);
             <div class="d-das"><h1><?php echo mysqli_num_rows($totalmasuk) ?></h1></div>
         </div>
     </div>
+    </a>
+    <a href="?page=SuratMenyurat&hal=SuratKeluar">
     <div class="c-das das-yl brad bshad">
         <h3>Total</h3>
         <div class="das flex">
@@ -43,4 +50,5 @@ $masuknow = mysqli_query($con, $sqlmasuknow);
             <div class="d-das"><h1><?php echo mysqli_num_rows($totalkeluar) ?></h1></div>
         </div>
     </div>
+    </a>
 </div>

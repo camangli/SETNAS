@@ -23,6 +23,10 @@ body{
     display: flex;
     align-items:stretch ;
 }
+.flex a{
+    text-decoration: none;
+    flex-grow: 1;
+}
 .l-con{
     flex-grow:1;    
     margin-right: 10px;
@@ -672,16 +676,16 @@ form{
     background-position: -10px 15px;
 }
 .das-gr{
-    background-color:greenyellow;
-    border-bottom: rgb(126, 190, 29) 25px solid;
+    background-color: #689f38;
+    border-bottom: #33691e 25px solid;
     background-image: url(../IMG/asset/srtmsk.png);
     background-repeat: no-repeat;
     background-size: 170px;
     background-position: -10px 7px;
 }
 .das-yl{
-    background-color:gold;
-    border-bottom: rgb(201, 171, 0) 25px solid;
+    background-color: #6454ac;
+    border-bottom: #241c3c 25px solid;
     background-image: url(../IMG/asset/srtklr.png);
     background-repeat: no-repeat;
     background-size: 170px;
@@ -733,4 +737,85 @@ form{
 .banner{
     width: 20%;;
     background-blend-mode:color;
+}
+
+/* pdf */
+.con-prn{
+    width: 800px;
+}
+.judul{
+    margin:10px 0px;
+    padding: 10px;
+    border: 2px #000 solid;
+}
+.judul h1{
+    width: 700px;
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+.lg-print{
+    width: 70px;
+    padding: 10px 10px 0px  0px;
+}
+.tbl-main{
+    width: 800px;
+    margin: 10px 0px;
+    border-collapse: collapse;
+}
+.tbl-main tr td{
+    border-top: 1px #000 solid;
+    padding: 10px 0px;
+}
+.col2{
+    width: 800px;
+}
+.c-col:first-child{
+    margin: 10px 10px 10px 0px;
+    flex-grow: 1;
+}
+.c-col:last-child{
+    margin: 10px 0px 10px 0px;
+    flex-grow: 2;
+}
+.t-distri:last-child{
+    margin-bottom: none !important;
+    margin-top: 10px;
+}
+.t-distri:first-child{
+    margin-bottom: 10px;
+}
+.t-distri{
+    width: 100%;
+    min-height: 200px ;
+    flex-grow: 1;
+    border: 1px #000 solid;
+}
+.t-distri h3, .t-distri h4, .t-pendapat h3 {
+    margin: 5px 5px;
+}
+.t-distri input[type=checkbox]{
+    transform: scale(1.5);
+    margin-top: 10px;
+}
+.t-pendapat{
+    width: 100%;
+    min-height: 650px;
+    height: 100%;
+    border: 1px #000 solid;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.c-dis{
+    width: 15px;
+    min-height: 20px;
+    margin: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    border: 1px #000 solid;
+}
+.c-dis h3{
+    text-align: center;
 }
