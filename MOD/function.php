@@ -1,6 +1,4 @@
 <?php
-date_default_timezone_set("Asia/Jakarta");
-if(isset($_GET['hal']))
 if ($_GET['hal']=="logout"){
     logout();
 }
