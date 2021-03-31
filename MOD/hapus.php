@@ -30,6 +30,6 @@ if ($qv == "SuratKeluar"){
     $data = mysqli_fetch_object($q);
     unlink("../IMG/asset/Profile/$data->foto");
     mysqli_query($con, "delete from karyawan where id_karyawan='$idv'");
-    header("location: ../?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data->id_suratmasuk", true, 301);
+    header("location: ../?page=Kepegawaian", true, 301);
 }
 ?>
