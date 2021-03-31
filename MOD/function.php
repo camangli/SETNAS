@@ -1,5 +1,5 @@
 <?php
-if ($_GET["hal"]=="logout"){
+if ($_GET['hal']=="logout"){
     logout();
 }
 function connect(){

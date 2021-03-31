@@ -14,7 +14,7 @@
             <div class="frpl-bnr"></div>
             <div class="l-tp flex">
                 <div class="con-t">
-                    <div class="ft"><img src="../SETNAS/IMG/asset/Profile/<?php $foto = foto($_SESSION['id']); echo $foto ?>"></div>
+                    <div class="ft"><img src="IMG/asset/Profile/<?php $foto = foto($_SESSION['id']); echo $foto ?>"></div>
                 </div>
                 <div class="con-t">
                     <h3><?php $user = iuser($_SESSION['id']); echo $user?></h3>
