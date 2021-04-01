@@ -774,6 +774,7 @@ form{
 .tbl-main tr td{
     border-top: 1px #000 solid;
     padding: 10px 0px;
+    font-size: 80%;
 }
 .col2{
     width: 100%;

@@ -25,22 +25,22 @@ $data = mysqli_fetch_object($q);
 		</div>
 		<table class="tbl-main">
 			<tr>
-				<td>Surat Dari</td>
-				<td>:</td>
+				<td style="width: 80px;">Surat Dari</td>
+				<td style="width: 10px;">:</td>
 				<td colspan="5"><?php echo "<b>$data->nama</b><br>$data->jabatan<br> $data->instansi" ?></td>
 			</tr>
 			<tr>
-				<td>No/Tgl Surat</td>
-				<td>:</td>
+				<td style="width: 80px;">No/Tgl Surat</td>
+				<td style="width: 10px;">:</td>
 				<td><?php echo $data->no_surat ?></td>
 				<td><?php echo tanggal($data->tanggal_masuk) ?></td>
-				<td>No. Agenda</td>
-				<td>:</td>
+				<td style="width: 80px;">No. Agenda</td>
+				<td style="width: 10px;">:</td>
 				<td><?php echo $data->no_agenda ?></td>
 			</tr>
 			<tr>
-				<td>Perihal</td>
-				<td>:</td>
+				<td style="width: 80px;">Perihal</td>
+				<td style="width: 10px;">:</td>
 				<td colspan="5"><?php echo $data->perihal ?></td>
 			</tr>
 		</table>

@@ -28,26 +28,32 @@ $data = mysqli_fetch_object($q);
             <table>
                 <tr>
                     <td>Tanggal Surat</td>
-                    <td>: <?php echo tanggal($data->tanggal_surat) ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo tanggal($data->tanggal_surat) ?></td>
                 </tr>
                 <tr>
                     <td>No. Surat</td>
-                    <td>: <?php echo $data->no_surat ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->no_surat ?></td>
                 </tr>
                     <td>Nama</td>
-                    <td>: <?php echo $data->nama ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->nama ?></td>
                 </tr>
                 </tr>
                     <td>Jabatan</td>
-                    <td>: <?php echo $data->jabatan ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->jabatan ?></td>
                 </tr>
                 </tr>
                     <td>Instansi</td>
-                    <td>: <?php echo $data->instansi ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->instansi ?></td>
                 </tr>
                 </tr>
                     <td>Perihal</td>
-                    <td>: <?php echo $data->perihal ?></td>
+                    <<td style="width: 10px;">:</td>
+                    <td><?php echo $data->perihal ?></td>
                 </tr>
             </table>
             <div class="c-mn-cb-pnl">

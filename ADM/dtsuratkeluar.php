@@ -24,19 +24,23 @@ $data = mysqli_fetch_object($q);
             <p class="nameframe">Data Pengirim</p>
             <table>
                     <td>Nama</td>
-                    <td>: <?php echo $data->nama_pengirim ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->nama_pengirim ?></td>
                 </tr>
                 </tr>
                     <td>Jabatan</td>
-                    <td>: <?php echo $data->jabatan_pengirim ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->jabatan_pengirim ?></td>
                 </tr>
                 </tr>
                     <td>Kepengurusan</td>
-                    <td>: <?php echo $data->kepengurusan ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->kepengurusan ?></td>
                 </tr>
                 </tr>
                     <td>Perihal</td>
-                    <td>: <?php echo $data->perihal ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->perihal ?></td>
                 </tr>
             </table>
         </div>
@@ -44,15 +48,18 @@ $data = mysqli_fetch_object($q);
             <p class="nameframe">Data Tujuan</p>
             <table>
                     <td>Nama</td>
-                    <td>: <?php echo $data->nama_tujuan ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->nama_tujuan ?></td>
                 </tr>
                 </tr>
                     <td>Jabatan</td>
-                    <td>: <?php echo $data->jabatan_tujuan ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->jabatan_tujuan ?></td>
                 </tr>
                 </tr>
                     <td>Instansi</td>
-                    <td>: <?php echo $data->instansi_tujuan ?></td>
+                    <td style="width: 10px;">:</td>
+                    <td><?php echo $data->instansi_tujuan ?></td>
                 </tr>
             </table>
             <div class="c-mn-cb-pnl">

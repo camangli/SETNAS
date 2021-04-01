@@ -30,31 +30,31 @@ $idkar = $_SESSION['id'];
                 </tr>
                 </tr>
                     <td>User ID</td>
-                    <td>:</td>
+                    <td style='width: 10px;'>:</td>
                     <td>$data2->id_user</td>
                 </tr>
                 <tr>
                     <td>Nama</td>
-                    <td>:</td>
+                    <td style='width: 10px;'>:</td>
                     <td>$data->nama</td>
                 </tr>
                 <tr>
                     <td>Jabatan</td>
-                    <td>:</td>
+                    <td style='width: 10px;'>:</td>
                     <td>$data->jabatan </td>
                 </tr>
                     <td>No. Telp</td>
-                    <td>:</td>
+                    <td style='width: 10px;'>:</td>
                     <td>$data->no_telp </td>
                 </tr>
                 </tr>
                     <td>Email</td>
-                    <td>:</td>
+                    <td style='width: 10px;'>:</td>
                     <td>$data->email </td>
                 </tr>
                 </tr>
                     <td>Alamat/Domisili</td>
-                    <td>:</td>
+                    <td style='width: 10px;'>:</td>
                     <td>$data->alamat </td>
                 </tr>
             </table>
