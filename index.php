@@ -38,7 +38,7 @@
                 <div>
                     <h3>SEKRETARIAT NASIONAL</h3>
                     <p>Ikatan Nasional Konsultan Indonesia</p>
-                    <p>Jl. Bendungan Hilir Raya No. 19 Jakarta Pusat</p>
+                    <p>Jl. Bendungan Hilir Raya No. 29 Jakarta Pusat</p>
                 </div>
             </div>
         </div>
