@@ -44,8 +44,7 @@ $data = mysqli_fetch_object($q);
 				<td colspan="5"><?php echo $data->perihal ?></td>
 			</tr>
 		</table>
-	</div>
-	<div class="flex col2">
+		<div class="flex col2">
 		<div class="c-col flex-col">
 			<div class="t-distri">
 				<h3>Distribusi :</h3>
@@ -90,6 +89,8 @@ $data = mysqli_fetch_object($q);
 			</div>
 		</div>
 	</div>
+	</div>
+	
 </body>
 </html>
 
