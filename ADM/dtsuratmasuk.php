@@ -52,7 +52,7 @@ $data = mysqli_fetch_object($q);
                 </tr>
                 </tr>
                     <td>Perihal</td>
-                    <<td style="width: 10px;">:</td>
+                    <td style="width: 10px;">:</td>
                     <td><?php echo $data->perihal ?></td>
                 </tr>
             </table>
