@@ -86,7 +86,7 @@
                     echo "
                     <tr>
                     <td style='width: 150px;'>$data2->no_surat</td>
-                    <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
+                    <td style='width: 200px;'><b>$data2->nama</b><br>$data2->jabatan<br>$data2->instansi</td>
                     <td style='width: 100px;'>$tglformat</td>
                     <td>$data2->perihal</td>
                     <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
@@ -110,7 +110,7 @@
                     echo "
                     <tr>
                     <td style='width: 150px;'>$data2->no_surat</td>
-                    <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
+                    <td style='width: 200px;'><b>$data2->nama</b><br>$data2->jabatan<br>$data2->instansi</td>
                     <td style='width: 100px;'>$tglformat</td>
                     <td>$data2->perihal</td>
                     <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
@@ -134,7 +134,7 @@
                     echo "
                     <tr>
                     <td style='width: 150px;'>$data2->no_surat</td>
-                    <td style='width: 200px;'>$data2->nama<br><b>$data2->jabatan<br>$data2->instansi</td>
+                    <td style='width: 200px;'><b>$data2->nama</b><br>$data2->jabatan<br>$data2->instansi</td>
                     <td style='width: 100px;'>$tglformat</td>
                     <td>$data2->perihal</td>
                     <td style='width: 80px;'><a href='?page=SuratMenyurat&hal=DetailSuratMasuk&id=$data2->id_suratmasuk' class='net'><span class='lg-m dtl'></span>Detail</a></td>
