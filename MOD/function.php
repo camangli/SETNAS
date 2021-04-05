@@ -2,6 +2,7 @@
 if ($_GET['hal']=="logout"){
     logout();
 }
+
 function connect(){
     $sname = "localhost";
     $uname = "root";
