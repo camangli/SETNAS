@@ -23,21 +23,17 @@ $data = mysqli_fetch_object($q);
         <div class="c-frame brad brsol">
             <p class="nameframe">Data Pengirim</p>
             <table>
+                <tr>
                     <td>Nama</td>
                     <td style="width: 10px;">:</td>
                     <td><?php echo $data->nama_pengirim ?></td>
                 </tr>
-                </tr>
+                <tr>
                     <td>Jabatan</td>
                     <td style="width: 10px;">:</td>
                     <td><?php echo $data->jabatan_pengirim ?></td>
                 </tr>
-                </tr>
-                    <td>Kepengurusan</td>
-                    <td style="width: 10px;">:</td>
-                    <td><?php echo $data->kepengurusan ?></td>
-                </tr>
-                </tr>
+                <tr>
                     <td>Perihal</td>
                     <td style="width: 10px;">:</td>
                     <td><?php echo $data->perihal ?></td>
@@ -47,16 +43,17 @@ $data = mysqli_fetch_object($q);
         <div class="c-frame brad brsol">
             <p class="nameframe">Data Tujuan</p>
             <table>
+                <tr>
                     <td>Nama</td>
                     <td style="width: 10px;">:</td>
                     <td><?php echo $data->nama_tujuan ?></td>
                 </tr>
-                </tr>
+                <tr>
                     <td>Jabatan</td>
                     <td style="width: 10px;">:</td>
                     <td><?php echo $data->jabatan_tujuan ?></td>
                 </tr>
-                </tr>
+                <tr>
                     <td>Instansi</td>
                     <td style="width: 10px;">:</td>
                     <td><?php echo $data->instansi_tujuan ?></td>
