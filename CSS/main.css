@@ -627,14 +627,14 @@ form{
 }
 .das h1{
     color: #fff;
-    font-size: 800%;
+    font-size: 635%;
     margin: 0;
     padding: 0;
 }
 .c-das{
     flex-grow: 1;
     height: 150px;
-    min-width: 190px;
+    min-width: 260px;
     margin: 10px;
     padding: 5px;
     overflow: hidden;
