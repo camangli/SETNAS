@@ -64,7 +64,7 @@ $data = mysqli_fetch_object($q);
             </div>
         </div>
         <div class="c-frame brad brsol pengirim">
-            <p class="nameframe">Tanggapan/Masukan</p>
+            <p class="nameframe">Tanggapan/Masukan SETNAS</p>
             <div class="c-cont-frame brad brsol">
                 <div class="c-tgp">
                     <?php

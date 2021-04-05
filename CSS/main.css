@@ -565,6 +565,17 @@ body{
     margin: 3px 0;
     padding: 0;
 }
+.c-m-tgp{
+    margin: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px #ddd dashed;
+}
+.c-m-tgp h4{
+    margin: 2px 0px !important;
+}
+.c-m-tgp p{
+    margin: 2px 0px !important;
+}
 .plc{
     margin: 3px 0;
     font-size: 12px;
@@ -774,6 +785,7 @@ form{
 .c-col:first-child{
     margin: 10px 10px 10px 0px;
     flex-grow: 1;
+    max-width: 245px;
 }
 .c-col:last-child{
     margin: 10px 0px 10px 0px;

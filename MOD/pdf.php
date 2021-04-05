@@ -11,7 +11,9 @@ $con = connect();
 $idsurat = $_GET['id'];
 $idkar = $_SESSION['id'];
 $sql = "select * from suratmasuk where id_suratmasuk='$idsurat'";
+$sql2 = "select * from tanggapan where id_suratmasuk='$idsurat'";
 $q = mysqli_query($con, $sql);
+$q2 = mysqli_query($con, $sql2);
 $data = mysqli_fetch_object($q);
 ?>
 	<div class="con-prn">
@@ -66,6 +68,32 @@ $data = mysqli_fetch_object($q);
 			</div>
 			<div class="t-distri">
 				<h3>Masukan Setnas:</h3>
+				<?php
+                        while ($data2 = mysqli_fetch_object($q2)){
+                            $sql3 = "select * from karyawan where id_karyawan='$data2->id_karyawan'";
+                            $q3 = mysqli_query($con, $sql3);
+                            $data3 = mysqli_fetch_object($q3);
+                            $tgl = $data2->waktu_tanggapan;
+                            $tglonly = tanggal($tgl);
+                            $tglwkt = tglwkt($tgl);
+                            date_default_timezone_set("Asia/Jakarta");
+                            if(tanggal(date("Y-m-d")) == $tglonly){
+                                $vtgl = $tglwkt;
+                            }else{
+                                $vtgl = "$tglonly, $tglwkt";
+                            }
+                            if($data3->id_karyawan == $idkar){
+                                $del =  " - <a class='plc-hps' href='MOD/hapus.php?q=Tanggapan&id=$data2->id_tanggapan'>Hapus</a>";
+                            } else {
+                                $del = "";
+                            }
+                            echo "
+                            <div class='c-m-tgp'>
+                                <h4>$data3->nama</h4>
+                                <p>$data2->tanggapan</p>
+                            </div>";
+                        }
+                    ?>
 			</div>
 			<div class="t-distri">
 				<h3>Keputusan DPN:</h3>
