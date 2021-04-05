@@ -627,23 +627,17 @@ form{
 }
 .das h1{
     color: #fff;
-    font-size: 635%;
+    font-size: 568%;
     margin: 0;
     padding: 0;
 }
 .c-das{
     flex-grow: 1;
-    height: 150px;
+    height: 80px;
     min-width: 260px;
     margin: 10px;
     padding: 5px;
     overflow: hidden;
-}
-.c-das h3{
-    color: #fff;
-    font-size: 150%;
-    margin: 0;
-    padding: 20px 0px 0px 0px !important; 
 }
 .d-das{
     flex-grow: 1;
@@ -651,9 +645,9 @@ form{
 }
 .d-das h3{
     color: #fff;
-    font-size: 250% !important;
+    font-size: 170% !important;
     margin: 0;
-    padding: 10px 0px !important;
+    padding: 10px 0px 0px 0px !important;
 }
 .d-das:first-child{
     max-width: 130px;
@@ -663,32 +657,32 @@ form{
     border-bottom: #1a5b8d 25px solid;
     background-image: url(../IMG/asset/srtmsk.png);
     background-repeat: no-repeat;
-    background-size: 170px;
-    background-position: -10px 7px;
+    background-size: 100px;
+    background-position: -1px -1px;
 }
 .das-rd{
     background-color:#ff4136;
     border-bottom: #dd2218 25px solid;
     background-image: url(../IMG/asset/srtklr.png);
     background-repeat: no-repeat;
-    background-size: 170px;
-    background-position: -10px 15px;
+    background-size: 100px;
+    background-position: -1px -1px;
 }
 .das-gr{
     background-color: #689f38;
     border-bottom: #33691e 25px solid;
     background-image: url(../IMG/asset/srtmsk.png);
     background-repeat: no-repeat;
-    background-size: 170px;
-    background-position: -10px 7px;
+    background-size: 100px;
+    background-position: -1px -1px;
 }
 .das-yl{
     background-color: #6454ac;
     border-bottom: #241c3c 25px solid;
     background-image: url(../IMG/asset/srtklr.png);
     background-repeat: no-repeat;
-    background-size: 170px;
-    background-position: -10px 15px;
+    background-size: 100px;
+    background-position: -1px -1px;
 }
 
 /*Home Page*/
