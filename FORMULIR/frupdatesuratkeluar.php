@@ -27,35 +27,47 @@ $data = mysqli_fetch_object($q);
                     <select id="jenis" name='jenis' class="brad brsol inpt">
                         <?php 
                             switch ($data->kepengurusan){
-                                case "DPN":
-                                    echo "<option value='DPN' selected>DPN</option>
-                                    <option value='DKN'>DKN</option>
-                                    <option value='POKJA'>POKJA</option>
-                                    <option value='SETNAS'>SEKRETARIAT</option>";
+                                case "/SKJ/DPN/":
+                                    echo "<option value='/SKJ/DPN/' selected>DPN</option>
+                                    <option value='/BDH/DPN/'>BENDAHARA</option>
+                                    <option value='/DKN/'>DKN</option>
+                                    <option value='/POKJA/DPN/'>POKJA</option>
+                                    <option value='/SETNAS/'>SEKRETARIAT</option>";
                                     break;
-                                case "DKN":
-                                    echo "<option value='DPN'>DPN</option>
-                                    <option value='DKN' selected>DKN</option>
-                                    <option value='POKJA'>POKJA</option>
-                                    <option value='SETNAS'>SEKRETARIAT</option>";
+                                case "/DKN/":
+                                    echo "<option value='/SKJ/DPN/'>DPN</option>
+                                    <option value='/BDH/DPN/'>BENDAHARA</option>
+                                    <option value='/DKN/' selected>DKN</option>
+                                    <option value='/POKJA/DPN/'>POKJA</option>
+                                    <option value='/SETNAS/'>SEKRETARIAT</option>";
                                     break;
-                                case "POKJA":
-                                    echo "<option value='DPN'>DPN</option>
-                                    <option value='DKN'>DKN</option>
-                                    <option value='POKJA' selected>POKJA</option>
-                                    <option value='SETNAS'>SEKRETARIAT</option>";
+                                case "/POKJA/DPN/":
+                                    echo "<option value='/SKJ/DPN/'>DPN</option>
+                                    <option value='/BDH/DPN/'>BENDAHARA</option>
+                                    <option value='/DKN/'>DKN</option>
+                                    <option value='/POKJA/DPN/' selected>POKJA</option>
+                                    <option value='/SETNAS/'>SEKRETARIAT</option>";
                                     break;
-                                case "SETNAS":
-                                    echo "<option  value='DPN'>DPN</option>
-                                    <option value='DKN'>DKN</option>
-                                    <option value='POKJA'>POKJA</option>
-                                    <option value='SETNAS' selected>SEKRETARIAT</option>";
+                                case "/SETNAS/":
+                                    echo "<option value='/SKJ/DPN/'>DPN</option>
+                                    <option value='/BDH/DPN/'>BENDAHARA</option>
+                                    <option value='/DKN/'>DKN</option>
+                                    <option value='/POKJA/DPN/'>POKJA</option>
+                                    <option value='/SETNAS/' selected>SEKRETARIAT</option>";
+                                    break;
+                                case "/BDH/DPN/":
+                                    echo "<option value='/SKJ/DPN/'>DPN</option>
+                                    <option value='/BDH/DPN/' selected>BENDAHARA</option>
+                                    <option value='/DKN/'>DKN</option>
+                                    <option value='/POKJA/DPN/'>POKJA</option>
+                                    <option value='/SETNAS/'>SEKRETARIAT</option>";
                                     break;
                                 default:
-                                echo "<option value='DPN'>DPN</option>
-                                    <option value='DKN'>DKN</option>
-                                    <option value='POKJA'>POKJA</option>
-                                    <option value='SETNAS'>SEKRETARIAT</option>";
+                                    echo "<option value='/SKJ/DPN/'>DPN</option>
+                                    <option value='/BDH/DPN/'>BENDAHARA</option>
+                                    <option value='/DKN/'>DKN</option>
+                                    <option value='/POKJA/DPN/'>POKJA</option>
+                                    <option value='/SETNAS/'>SEKRETARIAT</option>";
                             }
                         ?>
                         

@@ -31,53 +31,53 @@ $data = mysqli_fetch_object($q);
                     <select id="jenis" class="brad brsol inpt" name="jenis">
                         <?php
                         switch ($data->jenis_surat){
-                            case "DPP":
+                            case "/A/DPP/":
                                 echo "
-                                <option value='DPP' selected>DPP</option>
-                                <option value='Anggota'>Anggota</option>
-                                <option value='Pemerintah'>Pemerintah</option>
-                                <option value='Umum'>Umum</option>
-                                <option value='Luar Negeri'>Luar Negeri</option>";
+                                <option value='/A/DPP/' selected>DPP</option>
+                                <option value='/A/ANG/'>Anggota</option>
+                                <option value='/B/PEM/'>Pemerintah</option>
+                                <option value='/C/UM/'>Umum</option>
+                                <option value='/D/LN/'>Luar Negeri</option>";
                                 break;
-                            case "Anggota":
+                            case "/A/ANG/":
                                 echo "
-                                <option value='DPP'>DPP</option>
-                                <option value='Anggota' selected>Anggota</option>
-                                <option value='Pemerintah'>Pemerintah</option>
-                                <option value='Umum'>Umum</option>
-                                <option value='Luar Negeri'>Luar Negeri</option>";
+                                <option value='/A/DPP/'>DPP</option>
+                                <option value='/A/ANG/'  selected>Anggota</option>
+                                <option value='/B/PEM/'>Pemerintah</option>
+                                <option value='/C/UM/'>Umum</option>
+                                <option value='/D/LN/'>Luar Negeri</option>";
                                 break;
-                            case "Pemerintah":
+                            case "/B/PEM/":
                                 echo "
-                                <option value='DPP'>DPP</option>
-                                <option value='Anggota'>Anggota</option>
-                                <option value='Pemerintah' selected>Pemerintah</option>
-                                <option value='Umum'>Umum</option>
-                                <option value='Luar Negeri'>Luar Negeri</option>";
+                                <option value='/A/DPP/'>DPP</option>
+                                <option value='/A/ANG/'>Anggota</option>
+                                <option value='/B/PEM/' selected>Pemerintah</option>
+                                <option value='/C/UM/'>Umum</option>
+                                <option value='/D/LN/'>Luar Negeri</option>";
                                 break;
-                            case "Umum":
+                            case "/C/UM/":
                                 echo "
-                                <option value='DPP'>DPP</option>
-                                <option value='Anggota'>Anggota</option>
-                                <option value='Pemerintah'>Pemerintah</option>
-                                <option value='Umum' selected>Umum</option>
-                                <option value='Luar Negeri'>Luar Negeri</option>";
+                                <option value='/A/DPP/'>DPP</option>
+                                <option value='/A/ANG/'>Anggota</option>
+                                <option value='/B/PEM/'>Pemerintah</option>
+                                <option value='/C/UM/' selected>Umum</option>
+                                <option value='/D/LN/'>Luar Negeri</option>";
                                 break;
-                            case "Luar Negeri":
+                            case "/D/LN/":
                                 echo "
-                                <option value='DPP'>DPP</option>
-                                <option value='Anggota'>Anggota</option>
-                                <option value='Pemerintah'>Pemerintah</option>
-                                <option value='Umum'>Umum</option>
-                                <option value='Luar Negeri' selected>Luar Negeri</option>";
+                                <option value='/A/DPP/'>DPP</option>
+                                <option value='/A/ANG/'>Anggota</option>
+                                <option value='/B/PEM/'>Pemerintah</option>
+                                <option value='/C/UM/'>Umum</option>
+                                <option value='/D/LN/' selected>Luar Negeri</option>";
                                 break;
                             default:
                                 echo "
-                                <option value='DPP'>DPP</option>
-                                <option value='Anggota'>Anggota</option>
-                                <option value='Pemerintah'>Pemerintah</option>
-                                <option value='Umum'>Umum</option>
-                                <option value='Luar Negeri'>Luar Negeri</option>";
+                                <option value='/A/DPP/'>DPP</option>
+                                <option value='/A/ANG/'>Anggota</option>
+                                <option value='/B/PEM/'>Pemerintah</option>
+                                <option value='/C/UM/'>Umum</option>
+                                <option value='/D/LN/'>Luar Negeri</option>";
                                 break;
                         }
                         
