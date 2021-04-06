@@ -6,7 +6,7 @@ $q = strval($_GET['q']);
 $hal = strval($_GET['hal']);
 $con = connect();
 if ($hal == "noagenda"){
-    $sql = "select no_agenda from suratmasuk where no_agenda like '%$q%' order by no_agenda desc limit 1";
+    $sql = "select no_agenda from suratmasuk where no_agenda like '%____$q%' order by no_agenda desc limit 1";
     $result = mysqli_query($con, $sql);
     $data = mysqli_fetch_object($result);
     if (mysqli_num_rows($result) == 1){
@@ -16,7 +16,7 @@ if ($hal == "noagenda"){
         echo 1;
     }
 }else if ($hal == "nosurat"){
-        $sql = "select no_surat from suratkeluar where no_surat like '%$q%' order by no_surat desc limit 1";
+        $sql = "select no_surat from suratkeluar where no_surat like '____%$q%' order by no_surat desc limit 1";
         $result = mysqli_query($con, $sql);
         $data = mysqli_fetch_object($result);
         if (mysqli_num_rows($result) == 1){
