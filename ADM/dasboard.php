@@ -7,9 +7,10 @@ $sqlttlmasuk = "select * from suratmasuk";
 $totalmasuk = mysqli_query($con, $sqlttlmasuk);
 
 $tgl = date("Y-m-d");
-$sqlkeluarnow = "select * from suratkeluar where tanggal_surat='$tgl'";
+$tahun = date('Y');
+$sqlkeluarnow = "select * from suratkeluar where tanggal_surat='$tgl' and tanggal_surat between '$tahun-01-01' and '$tahun-12-31'";
 $keluarnow = mysqli_query($con, $sqlkeluarnow);
-$sqlmasuknow = "select * from suratmasuk where tanggal_masuk='$tgl'";
+$sqlmasuknow = "select * from suratmasuk where tanggal_masuk='$tgl' and tanggal_masuk between '$tahun-01-01' and '$tahun-12-31'";
 $masuknow = mysqli_query($con, $sqlmasuknow);
 
 ?>
