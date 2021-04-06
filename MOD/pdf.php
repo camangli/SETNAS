@@ -70,7 +70,7 @@ $data = mysqli_fetch_object($q);
 				<h3>Masukan Setnas:</h3>
 				<?php
                         while ($data2 = mysqli_fetch_object($q2)){
-                            $sql3 = "select * from karyawan where id_karyawan='$data2->id_karyawan'";
+                            $sql3 = "select * from karyawan where id_karyawan='$data2->id_karyawan' and id_bagian !='2'";
                             $q3 = mysqli_query($con, $sql3);
                             $data3 = mysqli_fetch_object($q3);
                             $tgl = $data2->waktu_tanggapan;
@@ -87,11 +87,14 @@ $data = mysqli_fetch_object($q);
                             } else {
                                 $del = "";
                             }
-                            echo "
-                            <div class='c-m-tgp'>
+							if ($data3->id_karyawan != null){
+								echo "
+                            	<div class='c-m-tgp'>
                                 <h4>$data3->nama</h4>
                                 <p>$data2->tanggapan</p>
-                            </div>";
+                            	</div>";
+							}
+                            
                         }
                     ?>
 			</div>
@@ -114,6 +117,37 @@ $data = mysqli_fetch_object($q);
 		<div class="c-col">
 			<div class="t-pendapat">
 				<h3>Pendapat DPN :</h3>
+				<?php
+						$sqla = "select * from tanggapan where id_suratmasuk='$idsurat'";
+						$qa = mysqli_query($con, $sqla);
+                        while ($data4 = mysqli_fetch_object($qa)){
+                            $sql5 = "select * from karyawan where id_karyawan='$data4->id_karyawan' and id_bagian ='2'";
+                            $q5 = mysqli_query($con, $sql5);
+                            $data5 = mysqli_fetch_object($q5);
+                            $tgl2 = $data4->waktu_tanggapan;
+                            $tglonly2 = tanggal($tgl2);
+                            $tglwkt2 = tglwkt($tgl2);
+                            date_default_timezone_set("Asia/Jakarta");
+                            if(tanggal(date("Y-m-d")) == $tglonly2){
+                                $vtgl2 = $tglwkt2;
+                            }else{
+                                $vtgl2 = "$tglonly2, $tglwkt2";
+                            }
+                            if($data5->id_karyawan == $idkar){
+                                $del =  " - <a class='plc-hps' href='MOD/hapus.php?q=Tanggapan&id=$data4->id_tanggapan'>Hapus</a>";
+                            } else {
+                                $del = "";
+                            }
+							if ($data5->id_karyawan != null){
+								echo "
+                            	<div class='c-m-tgp'>
+                                <h4>$data5->nama</h4>
+                                <p>$data4->tanggapan</p>
+                            	</div>";
+							}
+                            
+                        }
+                    ?>
 			</div>
 		</div>
 	</div>
