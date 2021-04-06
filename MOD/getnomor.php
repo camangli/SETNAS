@@ -11,8 +11,8 @@ if ($hal == "noagenda"){
     $result = mysqli_query($con, $sql);
     $data = mysqli_fetch_object($result);
     $data = mysqli_fetch_object($result);
-        if ( $jml = mysqli_num_rows($result) >= 1){
-            echo $jml + 1;
+        if (mysqli_num_rows($result) >= 1){
+            echo mysqli_num_rows($result) + 1;
     }else{
         echo 1;
     }
@@ -20,8 +20,8 @@ if ($hal == "noagenda"){
         $sql = "select no_surat from suratkeluar where no_surat like '%$q%' and tanggal_surat between '$tahun-01-01' and '$tahun-12-31'";
         $result = mysqli_query($con, $sql);
         $data = mysqli_fetch_object($result);
-        if ( $jml = mysqli_num_rows($result) >= 1){
-            echo $jml + 1;
+        if (mysqli_num_rows($result) >= 1){
+            echo mysqli_num_rows($result) + 1;
         }else{
             echo 1;
         }
