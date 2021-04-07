@@ -56,7 +56,7 @@ $data = mysqli_fetch_object($q);
 					<div class="c-dis"><h3></h3></div>
 				</div>
 				<div class="flex">
-					<div class="c-dis"><h3> </h3></div>
+					<div class="c-dis"><h3>LSI</h3></div>
 					<div class="c-dis"><h3> </h3></div>
 					<div class="c-dis"><h3> </h3></div>
 				</div>
@@ -138,7 +138,7 @@ $data = mysqli_fetch_object($q);
                             } else {
                                 $del = "";
                             }
-							if ($data5->id_karyawan != null){
+							if ($data5->id_karyawanEE != null){
 								echo "
                             	<div class='c-m-tgp'>
                                 <h4>$data5->nama</h4>
