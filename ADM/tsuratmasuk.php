@@ -191,7 +191,6 @@ if ($number_of_page >= $results_per_page){
         }
     }else if ($number_of_page == $halaman){
         if ($prev != 0){
-            $prev = $prev - 2;
             echo "
             <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
             ";
