@@ -176,8 +176,8 @@
 if ($number_of_page >= $results_per_page){
     $pembatas = $page+$results_per_page;
     $halaman = $page;
-    for($page = 1; $page <= $results_per_page; $page++) { 
-        while ($halaman <= $number_of_page){  
+    if($halaman <= $number_of_page)  {
+        for($page = 1; $page <= $results_per_page; $page++) {   
         echo "
             <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$halaman'><li>$halaman</li></a>
             ";
