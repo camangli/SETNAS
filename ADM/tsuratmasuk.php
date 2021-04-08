@@ -176,12 +176,54 @@
 if ($number_of_page >= $results_per_page){
     $pembatas = $page+$results_per_page;
     $halaman = $page;
-    if($halaman <= $number_of_page)  {
+    $prev = $page-1;
+
+    if($number_of_page - $halaman > 1) {
+        if ($prev != 0){
+            echo "
+            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+            ";
+        }
         for($page = 1; $page <= $results_per_page; $page++) {   
         echo "
             <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$halaman'><li>$halaman</li></a>
             ";
         }
+    }else if ($number_of_page == $halaman){
+        if ($prev != 0){
+            $prev = $prev - 2;
+            echo "
+            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+            ";
+        }else if($prev = $page){
+            $prev = $prev - 1;
+            echo "
+            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+            ";
+        }
+        for($page = $page-2; $page <= $results_per_page+2; $page++) { 
+            echo "
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
+                ";
+            }
+            
+    }else{
+        if ($prev != 0){
+            echo "
+            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+            ";
+        }else if($prev = $page){
+            $prev = $prev - 1;
+            echo "
+            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+            ";
+        }
+        for($page = $page-1; $page <= $results_per_page+2; $page++) { 
+            echo "
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
+                ";
+            }
+            
     }
     echo "
             <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$halaman><li>Selanjutnya</li></a>
