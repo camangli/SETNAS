@@ -11,7 +11,7 @@
         $page = $_GET['bag'];  
     }  
 
-    $results_per_page = 5;  
+    $results_per_page = 4;  
     $page_first_result = ($page-1) * $results_per_page;
 
 ?>
@@ -174,59 +174,66 @@
 <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=1'><li>Pertama</li></a>
 <?php
 if ($number_of_page >= $results_per_page){
-    $pembatas = $page+$results_per_page;
+    $pembatas = $page+$results_per_page ;
     $halaman = $page;
     $prev = $page-1;
-
-    if($number_of_page - $halaman > 1) {
-        if ($prev != 0){
-            echo "
-            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
-            ";
+         
+    
+        if($number_of_page - $halaman > 1) {
+            if ($prev != 0){
+                echo "
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+                ";
+            }
+            for($page = 1; $page <= $results_per_page; $page++) { 
+                    echo "
+                        <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$halaman'><li>$halaman</li></a>
+                        ";
+                        $halaman++;
+                    }
+        }else if ($number_of_page == $halaman){
+            if ($prev != 0){
+                $prev = $prev - 2;
+                echo "
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+                ";
+            }else if($prev = $page){
+                $prev = $prev - 1;
+                echo "
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+                ";
+            }
+            for($page = $page-2; $page <= $results_per_page; $page++) { 
+                echo "
+                    <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
+                    ";
+                }
+                
+        }else{
+            if ($prev != 0){
+                $prev = $prev - 1;
+                echo "
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+                ";
+            }else if($prev = $page){
+                $prev = $prev - 1;
+                echo "
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
+                ";
+            }
+            for($page = $page-1; $page <= $results_per_page+1; $page++) { 
+                echo "
+                    <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
+                    ";
+                }
+                
         }
-        for($page = 1; $page <= $results_per_page; $page++) {   
+        
+        if ($page >= $number_of_page){
         echo "
-            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$halaman'><li>$halaman</li></a>
-            ";
-        }
-    }else if ($number_of_page == $halaman){
-        if ($prev != 0){
-            echo "
-            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
-            ";
-        }else if($prev = $page){
-            $prev = $prev - 1;
-            echo "
-            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
-            ";
-        }
-        for($page = $page-2; $page <= $results_per_page+2; $page++) { 
-            echo "
-                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
+                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$pembatas'><li>Next</li></a>
                 ";
-            }
-            
-    }else{
-        if ($prev != 0){
-            echo "
-            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
-            ";
-        }else if($prev = $page){
-            $prev = $prev - 1;
-            echo "
-            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$prev'><li>Prev</li></a>
-            ";
         }
-        for($page = $page-1; $page <= $results_per_page+2; $page++) { 
-            echo "
-                <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
-                ";
-            }
-            
-    }
-    echo "
-            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$halaman><li>Selanjutnya</li></a>
-            ";
 }else{
     for($page = 1; $page <= $number_of_page; $page++) {  
         echo "

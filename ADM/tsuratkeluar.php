@@ -11,7 +11,7 @@ $no = 1;
         $page = $_GET['bag'];  
     }  
 
-    $results_per_page = 5;  
+    $results_per_page = 4;  
     $page_first_result = ($page-1) * $results_per_page;
 
 ?>
@@ -217,6 +217,7 @@ if ($number_of_page >= $results_per_page){
                     }
         }else if ($number_of_page == $halaman){
             if ($prev != 0){
+                $prev = $prev - 2;
                 echo "
                 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
                 ";
@@ -226,7 +227,7 @@ if ($number_of_page >= $results_per_page){
                 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
                 ";
             }
-            for($page = $page-2; $page <= $results_per_page+2; $page++) { 
+            for($page = $page-2; $page <= $results_per_page; $page++) { 
                 echo "
                     <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$page'><li>$page</li></a>
                     ";
@@ -234,6 +235,7 @@ if ($number_of_page >= $results_per_page){
                 
         }else{
             if ($prev != 0){
+                $prev = $prev - 1;
                 echo "
                 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
                 ";
@@ -243,16 +245,19 @@ if ($number_of_page >= $results_per_page){
                 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
                 ";
             }
-            for($page = $page-1; $page <= $results_per_page+2; $page++) { 
+            for($page = $page-1; $page <= $results_per_page+1; $page++) { 
                 echo "
                     <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$page'><li>$page</li></a>
                     ";
                 }
                 
-        }   
+        }
+        
+        if ($page >= $number_of_page){
         echo "
                 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$pembatas'><li>Next</li></a>
                 ";
+        }
 }else{
     for($page = 1; $page <= $number_of_page; $page++) {  
         echo "
