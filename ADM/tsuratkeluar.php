@@ -197,29 +197,27 @@ $no = 1;
 <ul>
 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=1'><li>Pertama</li></a>
 <?php
-$pembatas = $page+$results_per_page;
-$halaman = $page;
-while ($halaman <= $number_of_page){ 
 if ($number_of_page >= $results_per_page){
-    
+    $pembatas = $page+$results_per_page ;
+    $halaman = $page;
     
         for($page = 1; $page <= $results_per_page; $page++) { 
+            while ($halaman <= $number_of_page){ 
                 echo "
                     <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$halaman'><li>$halaman</li></a>
                     ";
                     $halaman++;
                     }
+            }
         echo "
-                <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$pembatas'><li>Selanjutnya</li></a>
+                <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$pembatas'><li>Next</li></a>
                 ";
 }else{
     for($page = 1; $page <= $number_of_page; $page++) {  
         echo "
             <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$page'><li>$page</li></a>
             ";
-            $halaman++;
     }
-}
 }
 ?>
 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=<?php echo $number_of_page ?>'><li>Akhir</li></a>
