@@ -1,5 +1,6 @@
 <?php
 include "../MOD/function.php";
+include "../MOD/session.php";
 
     $con = connect();
     $idv = $_GET['id'];

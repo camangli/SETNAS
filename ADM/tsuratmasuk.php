@@ -4,7 +4,16 @@
     $qcari = $_POST['cari'];
     $tglawal = $_POST['tglawal'];
     $tglakhir = $_POST['tglakhir'];
-    
+
+    if (!isset($_GET['bag'])) {  
+        $page = 1;  
+    } else {  
+        $page = $_GET['bag'];  
+    }  
+
+    $results_per_page = 5;  
+    $page_first_result = ($page-1) * $results_per_page;
+
 ?>
 <div class="flex">
     <div>
@@ -80,7 +89,12 @@
                 </tr>";
                 $no++;
                 $no2 = 1;
-                $sql2 = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'and $qw like '%$qcari%'");
+
+                $main = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'and $qw like '%$qcari%'");
+                $number_of_result = mysqli_num_rows($main);  
+                $number_of_page = ceil($number_of_result / $results_per_page); 
+
+                $sql2 = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'and $qw like '%$qcari%' limit $page_first_result, $results_per_page");
                 while($data2 = mysqli_fetch_object($sql2)){
                     $tglformat = tanggal($data2->tanggal_surat);
                     echo "
@@ -95,7 +109,12 @@
                 }
             }
         }else if($qcari == null and $tglawal != null and $tglakhir != null){
-            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $antara order by tanggal_surat desc");
+
+            $main = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $antara");
+            $number_of_result = mysqli_num_rows($main);  
+            $number_of_page = ceil($number_of_result / $results_per_page); 
+
+            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $antara order by tanggal_surat desc limit $page_first_result, $results_per_page");
             while($data1 = mysqli_fetch_object($sql1)){
                 $tgl = $data1->tanggal_masuk;
                 $ltgl = tanggal($tgl);
@@ -119,7 +138,12 @@
                 }
             }
         }else{  
-            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk order by tanggal_masuk desc limit 7");
+
+            $main = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk");
+            $number_of_result = mysqli_num_rows($main);  
+            $number_of_page = ceil($number_of_result / $results_per_page); 
+
+            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk order by tanggal_masuk desc limit $page_first_result, $results_per_page");
             while($data1 = mysqli_fetch_object($sql1)){
                 $tgl = $data1->tanggal_masuk;
                 $ltgl = tanggal($tgl);
@@ -145,3 +169,27 @@
         }
     ?>
 </table>
+<div class='c-paggin'>
+<ul>
+<a href='?page=SuratMenyurat&hal=SuratMasuk&bag=1'><li>Pertama</li></a>
+<?php
+if ($number_of_page >= 10){
+    for($page = 1; $page <= 5; $page++) {  
+        echo "
+            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
+            ";
+    }
+    echo "
+            <a><li>....</li></a>
+            ";
+}else{
+    for($page = 1; $page <= $number_of_page; $page++) {  
+        echo "
+            <a href='?page=SuratMenyurat&hal=SuratMasuk&bag=$page'><li>$page</li></a>
+            ";
+    }
+}
+?>
+<a href='?page=SuratMenyurat&hal=SuratMasuk&bag=<?php echo $number_of_page ?>'><li>Akhir</li></a>
+</ul>
+</div>

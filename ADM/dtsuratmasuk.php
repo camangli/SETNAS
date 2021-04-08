@@ -1,7 +1,4 @@
 <?php
-include "../MOD/function.php";
-include "../MOD/session.php";
-
 $con = connect();
 $idsurat = $_GET['id'];
 $idkar = $_SESSION['id'];
@@ -59,7 +56,7 @@ $data = mysqli_fetch_object($q);
             <div class="c-mn-cb-pnl">
             <a href="?page=SuratMenyurat&hal=UpdateSuratMasuk&id=<?php echo $data->id_suratmasuk ?>" class="mn-cb-pnl net"><span class="lg-m ubh"></span>Edit</a>
             <a href="ADM/DATA/SuratMasuk/<?php echo $data->nama_file ?>" target="_blank" class="mn-cb-pnl net"><span class="lg-m ctk"></span>Cetak Surat</a>
-            <a href="MOD/pdf.php?id=<?php echo $data->id_suratmasuk ?>" target="_blank" class="mn-cb-pnl net"><span class="lg-m ctk"></span>Cetak Lembar Disposisi</a>
+            <a href="MOD/pdf/?id=<?php echo $data->id_suratmasuk ?>" target="_blank" class="mn-cb-pnl net"><span class="lg-m ctk"></span>Cetak Lembar Disposisi</a>
             <?php echo "<a onClick=\"javascript: return confirm('Apakah Yakin Akan Menghapus Surat');\" href='MOD/hapus.php?q=SuratMasuk&id=$data->id_suratmasuk' class='mn-cb-pnl alrt'><span class='lg-m hps'></span>Hapus</a>";?>
             </div>
         </div>

@@ -833,3 +833,32 @@ form{
 .c-dis h3{
     text-align: center;
 }
+/*Pagging*/
+.c-paggin{
+    margin: 10px;
+    float: right;
+}
+.c-paggin ul{
+    float: right;
+    list-style: none;
+}
+.c-paggin ul a{  
+    float: left;
+    border: 1px #ccc solid; 
+    border-left: none;
+    max-width: 50px;
+    padding: 10px 20px;
+    font-weight: 450;
+    color: #000;
+}
+.c-paggin ul a:first-child{  
+        border-left: 1px #ccc solid;
+        border-radius: 4px 0px 0px 4px;
+}
+.c-paggin ul a:last-child{  
+    border-radius: 0px 4px 4px 0px;
+}
+.c-paggin ul a:hover{  
+    background: #ccc;
+    transition: 0.4s;
+}

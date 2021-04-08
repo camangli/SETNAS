@@ -1,8 +1,7 @@
 <?php
-include "../MOD/function.php";
 
 $con = connect();
-$idsurat = $_GET['id'];
+$idsurat = isset($_GET['id']);
 $sql = "select * from suratmasuk where id_suratmasuk='$idsurat'";
 $q = mysqli_query($con, $sql);
 $data = mysqli_fetch_object($q);

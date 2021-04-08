@@ -1,7 +1,4 @@
 <?php
-include "../MOD/function.php";
-include "../MOD/session.php";
-
 $con = connect();
 $idkar = $_SESSION['id'];
 $sql = "select * from karyawan where id_karyawan='$idkar'";

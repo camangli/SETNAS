@@ -28,7 +28,7 @@ function ceklogin($username, $pwd){
     }else{
 
         echo "<script language='javascript'>alert('Usernama atau password salah')</script>";
-        header("location: ../f-login.php", true, 301);
+        header("location: ../login/", true, 301);
     }
 }
 function iuser($id){

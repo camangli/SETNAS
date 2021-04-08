@@ -1,6 +1,4 @@
 <?php
-include "../MOD/function.php";
-
 $con = connect();
 $idsurat = $_GET['id'];
 $sql = "select * from suratkeluar where id_suratkeluar='$idsurat'";
