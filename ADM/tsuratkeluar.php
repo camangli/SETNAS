@@ -54,33 +54,37 @@ $no = 1;
             $antara = "tanggal_surat between '$tglawal' and '$tglakhir'";
         }
 
-        if($qcari != null){  
+        if($qcari != null){ 
             $qw = 'perihal';
-            $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+            $main = mysqli_query($con, "select * from suratkeluar where $qw like '%$qcari%'");
+            $number_of_result = mysqli_num_rows($main);  
+            $number_of_page = ceil($number_of_result / $results_per_page); 
+
+            $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
             if(mysqli_num_rows($sql1) == null){
                 $qw = 'no_surat';
-                $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                 if(mysqli_num_rows($sql1) == null){
                     $qw = 'tanggal_surat';
-                    $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                    $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                     if(mysqli_num_rows($sql1) == null){
                         $qw = 'kepengurusan';
-                        $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                        $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                         if(mysqli_num_rows($sql1) == null){
                             $qw = 'nama_pengirim';
-                            $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                            $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                             if(mysqli_num_rows($sql1) == null){
                                 $qw = 'jabatan_pengirim';
-                                $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                                $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                                 if(mysqli_num_rows($sql1) == null){
                                     $qw = 'nama_tujuan';
-                                    $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                                    $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                                     if(mysqli_num_rows($sql1) == null){
                                         $qw = 'jabatan_tujuan';
-                                        $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                                        $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                                         if(mysqli_num_rows($sql1) == null){
                                             $qw = 'instansi_tujuan';
-                                            $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc");
+                                            $sql1 = mysqli_query($con, "select distinct tanggal_surat from suratkeluar where $qw like '%$qcari%' $and $antara order by tanggal_surat asc limit $page_first_result, $results_per_page");
                                         }
                                     }
                                 }
@@ -97,13 +101,7 @@ $no = 1;
                 </tr>";
                 $no++;
                 $no2 = 1;
-
-                $main = mysqli_query($con, "select * from suratkeluar where tanggal_surat='$tgl' and $qw like '%$qcari%'");
-                $number_of_result = mysqli_num_rows($main);  
-                $number_of_page = ceil($number_of_result / $results_per_page); 
-
-                $sql2 = mysqli_query($con, "select * from suratkeluar where tanggal_surat='$tgl' and $qw like '%$qcari%' limit $page_first_result, $results_per_page");
-
+                $sql2 = mysqli_query($con, "select * from suratkeluar where tanggal_surat='$tgl' and $qw like '%$qcari%'");
                 while($data2 = mysqli_fetch_object($sql2)){
                     $sql3 = mysqli_query($con, "select * from pengiriman where id_suratkeluar='$data2->id_suratkeluar'");
                     $jml = mysqli_num_rows($sql3);

@@ -55,26 +55,32 @@
         }
 
         if($qcari != null){  
+
             $qw = 'perihal';
-            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc");
+            $main = mysqli_query($con, "select * from suratmasuk where $qw like '%$qcari%'");
+            $number_of_result = mysqli_num_rows($main);  
+            $number_of_page = ceil($number_of_result / $results_per_page); 
+
+            $lim = "limit $page_first_result, $results_per_page";
+            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc $lim");
             if(mysqli_num_rows($sql1) == null){
                 $qw = 'no_agenda';
-                $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc");
+                $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc $lim");
                 if(mysqli_num_rows($sql1) == null){
                     $qw = 'no_surat';
-                    $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc");
+                    $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc $lim");
                     if(mysqli_num_rows($sql1) == null){
                         $qw = 'jenis_surat';
-                        $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc");
+                        $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc $lim");
                         if(mysqli_num_rows($sql1) == null){
                             $qw = 'nama';
-                            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc");
+                            $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc $lim");
                             if(mysqli_num_rows($sql1) == null){
                                 $qw = 'jabatan';
-                                $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc");
+                                $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc $lim");
                                 if(mysqli_num_rows($sql1) == null){
                                     $qw = 'instansi';
-                                    $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc");
+                                    $sql1 = mysqli_query($con, "select distinct tanggal_masuk from suratmasuk where $qw like '%$qcari%' $and $antara order by tanggal_surat desc $lim");
                                 }
                             }
                         }
@@ -89,12 +95,7 @@
                 </tr>";
                 $no++;
                 $no2 = 1;
-
-                $main = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'and $qw like '%$qcari%'");
-                $number_of_result = mysqli_num_rows($main);  
-                $number_of_page = ceil($number_of_result / $results_per_page); 
-
-                $sql2 = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'and $qw like '%$qcari%' limit $page_first_result, $results_per_page");
+                $sql2 = mysqli_query($con, "select * from suratmasuk where tanggal_masuk='$tgl'and $qw like '%$qcari%'");
                 while($data2 = mysqli_fetch_object($sql2)){
                     $tglformat = tanggal($data2->tanggal_surat);
                     echo "
