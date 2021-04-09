@@ -197,64 +197,34 @@ $no = 1;
 <ul>
 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=1'><li>Pertama</li></a>
 <?php
-if ($number_of_page >= $results_per_page){
-    $pembatas = $page+$results_per_page ;
+if ($number_of_page > $results_per_page){
+    $pembatas = $page+1;
     $halaman = $page;
     $prev = $page-1;
-         
-    
-        if($number_of_page - $halaman > 1) {
-            if ($prev != 0){
+            if ($prev >= 1){
+                $prev = $prev;
                 echo "
                 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
                 ";
             }
-            for($page = 1; $page <= $results_per_page; $page++) { 
+            if ($number_of_page - $page < 4){
+                for($i = $page; $i <= $number_of_page; $i++) { 
                     echo "
-                        <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$halaman'><li>$halaman</li></a>
+                        <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$i'><li>$i</li></a>
                         ";
-                        $halaman++;
+                    $page++;
                     }
-        }else if ($number_of_page == $halaman){
-            if ($prev != 0){
-                $prev = $prev - 2;
-                echo "
-                <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
-                ";
-            }else if($prev = $page){
-                $prev = $prev - 1;
-                echo "
-                <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
-                ";
+            }else{
+                for($i = 1; $i <= 4; $i++) { 
+                    echo "
+                        <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$page'><li>$page</li></a>
+                        ";
+                    $page++;
+                    }
             }
-            for($page = $page-2; $page <= $results_per_page; $page++) { 
-                echo "
-                    <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$page'><li>$page</li></a>
-                    ";
-                }
-                
-        }else{
-            if ($prev != 0){
-                $prev = $prev - 1;
-                echo "
-                <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
-                ";
-            }else if($prev = $page){
-                $prev = $prev - 1;
-                echo "
-                <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$prev'><li>Prev</li></a>
-                ";
-            }
-            for($page = $page-1; $page <= $results_per_page+1; $page++) { 
-                echo "
-                    <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$page'><li>$page</li></a>
-                    ";
-                }
-                
-        }
         
-        if ($page >= $number_of_page){
-        echo "
+        if ($page <= $number_of_page){
+            echo "
                 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$pembatas'><li>Next</li></a>
                 ";
         }
@@ -264,6 +234,7 @@ if ($number_of_page >= $results_per_page){
             <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=$page'><li>$page</li></a>
             ";
     }
+    
 }
 ?>
 <a href='?page=SuratMenyurat&hal=SuratKeluar&bag=<?php echo $number_of_page ?>'><li>Akhir</li></a>
