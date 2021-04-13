@@ -1,7 +1,7 @@
 <?php
 
 $con = connect();
-$idsurat = isset($_GET['id']);
+$idsurat = $_GET['id'];
 $sql = "select * from suratmasuk where id_suratmasuk='$idsurat'";
 $q = mysqli_query($con, $sql);
 $data = mysqli_fetch_object($q);
