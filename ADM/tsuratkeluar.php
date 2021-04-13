@@ -56,7 +56,7 @@ $no = 1;
 
         if($qcari != null){ 
             $qw = 'perihal';
-            $main = mysqli_query($con, "select * from suratkeluar where $qw like '%$qcari%'");
+            $main = mysqli_query($con, "select * from suratmasuk where $qw like '%$qcari%'");
             $number_of_result = mysqli_num_rows($main);  
             $number_of_page = ceil($number_of_result / $results_per_page); 
 
