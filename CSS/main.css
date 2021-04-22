@@ -644,7 +644,7 @@ form{
 .c-das{
     flex-grow: 1;
     height: 80px;
-    min-width: 200px;
+    min-width: 130px;
     margin: 10px;
     padding: 5px;
     overflow: hidden;
